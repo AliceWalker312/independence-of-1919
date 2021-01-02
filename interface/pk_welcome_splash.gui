@@ -1,0 +1,51 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "pk_welcome_splash_container"
+		position = { x = 0 y = 30 }
+		size = { width = 750 height = 630 }
+		moveable = yes
+		orientation = CENTER
+		origo = center
+
+		background = {
+			name = "pk_logo"
+			spriteType ="GFX_pk_splash_intro"
+			position = { x = -24 y = -70 }
+		}
+
+		background = {
+			name = "pk_logo_bg"
+			spriteType = "GFX_pk_splash_intro_box"
+			position = { x = -15 y = 357 }
+		}
+
+		instantTextboxType = {
+			name = "tab_1_text_header_2"
+			position = { x = 25 y = 384 }
+			font = "aldrich_36_outline"
+			text = "pk_SPLASH_TITLE"
+			maxWidth = 700
+			format = center
+		}
+
+		instantTextboxType = {
+			name = "tab_1_cont3_text"
+			position = { x = 43 y=453 }
+			font = "aldrich_20_outline"
+			text = "pk_SPLASH_CREDITS"
+			maxWidth = 670
+		}
+
+		buttonType = {
+			name = "mod_options_button"
+			position = { x = 226 y = 590 }
+			quadTextureSprite ="GFX_main_lobby_button"	
+			buttonText = "확인"
+			buttonFont = "aldrich_24_outline"
+			clicksound = click_default
+			oversound = ui_menu_over
+			shortcut = "ESCAPE"
+		}
+	}
+}

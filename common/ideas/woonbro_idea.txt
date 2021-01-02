@@ -1,0 +1,38 @@
+ideas = {
+	country = {
+		
+		KOR_king_yi_un1 = {
+			picture = KOR_king_yi_un
+			modifier = {
+				political_power_gain = 0.10
+			}
+		}
+		KOR_rewriting_law = {
+			picture = stiff_upper_lip
+			modifier = {
+				political_power_gain = -0.10
+			}
+		}
+		KOR_rewriting_law_2 = {
+			picture = stiff_upper_lip
+			modifier = {
+				political_power_gain = -0.05
+			}
+		}
+		KOR_rewriting_law_3 = {
+			picture = stiff_upper_lip
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		KOR_lee_minster_of_deffence = {
+			picture = idea_KOR_lee_beom_seok
+			modifier = {
+			custom_modifier_tooltip = KOR_lee_minster_of_deffence1
+				hidden_effect = {
+					experience_gain_infantry_combat_factor = 0.3
+				}
+			}
+		}
+	}
+}

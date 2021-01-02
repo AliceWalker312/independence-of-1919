@@ -1,0 +1,7 @@
+music = { #올드랭사인 애국가 메인테마
+	name = "maintheme"
+	file = "hoi4mainthemeallies.ogg"
+	volume = 0.8
+}
+
+

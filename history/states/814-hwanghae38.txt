@@ -1,0 +1,17 @@
+state={
+	id=814
+	name="황해 남부"
+	provinces={
+		13245 13246 
+	}
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KOR
+	}
+	manpower=13800
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,1072 @@
+focus_tree = {
+	id = Imperial_Korea
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 9
+			tag = KOR
+		}
+	}
+	default = no
+	focus = {
+		id = EOK_for_the_victory
+		icon = GFX_goal_unknown
+		cost = 5.00
+		x = 18
+		y = 0
+		completion_reward = {
+			add_command_power = 20
+		}
+
+	}
+	focus = {
+		id = EOK_civil_support
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_for_the_victory
+		}
+		x = 13
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+	}
+	focus = {
+		id = EOK_royal_publicity
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_civil_support
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+		x = 13
+		y = 2
+
+	}
+	focus = {
+		id = EOK_allie_with_junta
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_for_the_victory
+		}
+		completion_reward = {
+			country_event = EOK.1
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = EOK_ues_junta_resource
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_allie_with_junta
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = KOR
+			}
+		}
+		x = 16
+		y = 2
+
+	}
+	focus = {
+		id = EOK_form_imperial_military
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_for_the_victory
+		}
+		completion_reward = {
+			525 = {
+					create_unit = {
+						division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+			}
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = EOK_conscription
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_form_imperial_military
+		}
+		completion_reward = {
+			add_manpower = 1000
+		}
+		x = 20
+		y = 2
+
+	}
+	focus = {
+		id = EOK_secret_police
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_for_the_victory
+		}
+		completion_reward = {
+			add_ideas = EOK_secret_police1
+		}
+		x = 23
+		y = 1
+
+	}
+	focus = {
+		id = EOK_arrest_oppose
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_secret_police
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.2
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = -0.2
+			}
+		}
+		x = 23
+		y = 2
+
+	}
+	focus = {
+		id = EOK_win_civilwar
+		icon = GFX_goal_unknown
+		cost = 5.00
+		available = {
+			has_war = no
+		}
+		prerequisite = {
+			focus = EOK_arrest_oppose
+		}
+		prerequisite = {
+			focus = EOK_conscription
+		}
+		prerequisite = {
+			focus = EOK_ues_junta_resource
+		}
+		prerequisite = {
+			focus = EOK_royal_publicity
+		}
+		completion_reward = {
+			country_event = EOK.2
+			hidden_effect = {
+				remove_ideas = EOK_secret_police1
+			}
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = EOK_return_joungchuwon
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_win_civilwar
+		}
+		mutually_exclusive = {
+			focus = EOK_no_joungchuwon
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOR_joungchuwon
+			hidden_effect = {
+				set_country_flag = KOR_return_joungchuwon
+				add_ideas = EOK_joungchuwon_na
+			}
+		}
+		x = 17
+		y = 4
+
+	}
+	focus = {
+		id = EOK_no_joungchuwon
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_win_civilwar
+		}
+		mutually_exclusive = {
+			focus = EOK_return_joungchuwon
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOR_no_joungchuwon
+		}
+		x = 19
+		y = 4
+
+	}
+	focus = {
+		id = EOK_royalty_kingdom
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_return_joungchuwon
+			focus = EOK_no_joungchuwon
+		}
+		mutually_exclusive = {
+			focus = EOK_declar_empire
+		}
+		completion_reward = {
+			set_cosmetic_tag = KOR_kingdom_of_chosen
+			create_country_leader = {
+	        name = "국왕 이은"
+	        desc = ""
+	        picture = "gfx/leaders/KOR/portrait_yi_un.dds"
+	        expire = "1965.1.1"
+	        ideology = despotism
+			}
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = EOK_delete_na
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_royalty_kingdom
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOR_deleted_nation_assambly
+			set_country_flag = KOR_RETURN_THE_KING
+		}
+		x = 9
+		y = 6
+
+	}
+	focus = {
+		id = EOK_declar_empire
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_no_joungchuwon
+			focus = EOK_return_joungchuwon
+		}
+		mutually_exclusive = {
+			focus = EOK_royalty_kingdom
+		}
+		completion_reward = {
+			set_cosmetic_tag = KOR_EMPIRE
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = EOK_deal_with_depression
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_declar_empire
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = EOK_economy_intervention
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_deal_with_depression
+		}
+		x = 23
+		y = 7
+
+	}
+	focus = {
+		id = EOK_gold_standard
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_economy_intervention
+		}
+		x = 23
+		y = 8
+
+	}
+	focus = {
+		id = EOK_export_focus
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_gold_standard
+		}
+		x = 24
+		y = 9
+
+	}
+	focus = {
+		id = EOK_industrial_development
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_export_focus
+		}
+		x = 24
+		y = 10
+
+	}
+	focus = {
+		id = EOK_make_highway
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_industrial_development
+		}
+		x = 23
+		y = 11
+
+	}
+	focus = {
+		id = EOK_political_advisor_deal
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_declar_empire
+		}
+		x = 27
+		y = 6
+
+	}
+	focus = {
+		id = EOK_problem_demo
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_political_advisor_deal
+		}
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = EOK_kill_demo
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_problem_demo
+		}
+		mutually_exclusive = {
+			focus = EOK_deal_demo
+		}
+		x = 26
+		y = 8
+
+	}
+	focus = {
+		id = EOK_deal_demo
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_problem_demo
+		}
+		mutually_exclusive = {
+			focus = EOK_kill_demo
+		}
+		x = 28
+		y = 8
+
+	}
+	focus = {
+		id = EOK_fate_of_junta
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_deal_demo
+			focus = EOK_kill_demo
+		}
+		x = 27
+		y = 9
+
+	}
+	focus = {
+		id = EOK_rewrite_law
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_fate_of_junta
+		}
+		x = 27
+		y = 10
+
+	}
+	focus = {
+		id = EOK_imperial_guards
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_rewrite_law
+		}
+		x = 27
+		y = 11
+
+	}
+	focus = {
+		id = EOK_god_save_the_emperor
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_imperial_guards
+		}
+		x = 27
+		y = 12
+
+	}
+	focus = {
+		id = EOK_see_depression
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_royalty_kingdom
+		}
+		x = 13
+		y = 6
+
+	}
+	focus = {
+		id = EOK_intervention_ready
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_focus_aircraft_carrier
+			focus = EOK_focus_battleship
+		}
+		prerequisite = {
+			focus = EOK_pilot_school
+		}
+		prerequisite = {
+			focus = EOK_focus_fire_power
+		}
+		x = 18
+		y = 11
+
+	}
+	focus = {
+		id = EOK_new_deal
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_see_depression
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = EOK_secret_police_problem
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_delete_na
+		}
+		x = 9
+		y = 7
+
+	}
+	focus = {
+		id = EOK_continue
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_secret_police_problem
+		}
+		mutually_exclusive = {
+			focus = EOK_political_liberty
+		}
+		x = 8
+		y = 8
+
+	}
+	focus = {
+		id = EOK_political_liberty
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_secret_police_problem
+		}
+		mutually_exclusive = {
+			focus = EOK_continue
+		}
+		x = 10
+		y = 8
+
+	}
+	focus = {
+		id = EOK_problem_conscription
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_declar_empire
+			focus = EOK_royalty_kingdom
+		}
+		x = 18
+		y = 6
+
+	}
+	focus = {
+		id = EOK_discharge_of_conscripts
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_problem_conscription
+		}
+		mutually_exclusive = {
+			focus = EOK_annex_conscripts
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = EOK_annex_conscripts
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_problem_conscription
+		}
+		mutually_exclusive = {
+			focus = EOK_discharge_of_conscripts
+		}
+		x = 19
+		y = 7
+
+	}
+	focus = {
+		id = EOK_reform_military
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_annex_conscripts
+			focus = EOK_discharge_of_conscripts
+		}
+		x = 18
+		y = 8
+
+	}
+	focus = {
+		id = EOK_infantry_reform
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_reform_military
+		}
+		x = 15
+		y = 9
+
+	}
+	focus = {
+		id = EOK_navy_reform
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_reform_military
+		}
+		x = 18
+		y = 9
+
+	}
+	focus = {
+		id = EOK_air_force_reform
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_reform_military
+		}
+		x = 21
+		y = 9
+
+	}
+	focus = {
+		id = EOK_focus_battleship
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_navy_reform
+		}
+		mutually_exclusive = {
+			focus = EOK_focus_aircraft_carrier
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = EOK_focus_aircraft_carrier
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_navy_reform
+		}
+		mutually_exclusive = {
+			focus = EOK_focus_battleship
+		}
+		x = 19
+		y = 10
+
+	}
+	focus = {
+		id = EOK_pilot_school
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_air_force_reform
+		}
+		x = 22
+		y = 10
+
+	}
+	focus = {
+		id = EOK_focus_fire_power
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_infantry_reform
+		}
+		x = 14
+		y = 10
+
+	}
+	focus = {
+		id = EOK_bank_reform
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_new_deal
+		}
+		x = 13
+		y = 8
+
+	}
+	focus = {
+		id = EOK_farm_support
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_bank_reform
+		}
+		x = 12
+		y = 9
+
+	}
+	focus = {
+		id = EOK_support_migrant_workers
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_farm_support
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
+		id = EOK_budget_cuts
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_support_migrant_workers
+		}
+		x = 13
+		y = 11
+
+	}
+	focus = {
+		id = EOK_blow_up_shampin
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_budget_cuts
+		}
+		x = 13
+		y = 12
+
+	}
+	focus = {
+		id = EOK_miracle_on_the_han_river
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_make_highway
+		}
+		x = 23
+		y = 12
+
+	}
+	focus = {
+		id = EOK_go_with_junta
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_political_liberty
+			focus = EOK_continue
+		}
+		x = 9
+		y = 9
+
+	}
+	focus = {
+		id = EOK_royal_law
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_go_with_junta
+		}
+		x = 9
+		y = 10
+
+	}
+	focus = {
+		id = EOK_form_royal_guards
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_royal_law
+		}
+		x = 9
+		y = 11
+
+	}
+	focus = {
+		id = EOK_all_hail_the_king
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_form_royal_guards
+		}
+		x = 9
+		y = 12
+
+	}
+	focus = {
+		id = EOK_aggressive
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_intervention_ready
+		}
+		x = 18
+		y = 12
+
+	}
+	focus = {
+		id = EOK_sun_down
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_aggressive
+		}
+		x = 18
+		y = 13
+
+	}
+	focus = {
+		id = EOK_allie_eng
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_demand_king
+		}
+		prerequisite = {
+			focus = EOK_allie_or_attack_sia
+		}
+		mutually_exclusive = {
+			focus = EOK_mal_or_war
+		}
+		x = 14
+		y = 15
+
+	}
+	focus = {
+		id = EOK_attack_allie
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_mal_or_war
+		}
+		x = 22
+		y = 16
+
+	}
+	focus = {
+		id = EOK_demand_mal
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_allie_eng
+		}
+		x = 14
+		y = 16
+
+	}
+	focus = {
+		id = EOK_mal_or_war
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_allie_or_attack_sia
+		}
+		prerequisite = {
+			focus = EOK_demand_king
+		}
+		mutually_exclusive = {
+			focus = EOK_allie_eng
+		}
+		x = 22
+		y = 15
+
+	}
+	focus = {
+		id = EOK_demand_indochina
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_demand_mal
+		}
+		x = 12
+		y = 17
+
+	}
+	focus = {
+		id = EOK_demand_east_india
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_demand_mal
+		}
+		x = 16
+		y = 17
+
+	}
+	focus = {
+		id = EOK_occupation_mal
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_attack_allie
+		}
+		x = 20
+		y = 17
+
+	}
+	focus = {
+		id = EOK_occupation_east_india
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_attack_allie
+		}
+		x = 24
+		y = 17
+
+	}
+	focus = {
+		id = EOK_demand_king
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_sun_down
+		}
+		x = 16
+		y = 14
+
+	}
+	focus = {
+		id = EOK_allie_or_attack_sia
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_sun_down
+		}
+		x = 20
+		y = 14
+
+	}
+	focus = {
+		id = EOK_attack_sov
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_occupation_east_india
+		}
+		prerequisite = {
+			focus = EOK_occupation_mal
+		}
+		x = 21
+		y = 18
+
+	}
+	focus = {
+		id = EOK_attack_fascism
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_occupation_east_india
+		}
+		prerequisite = {
+			focus = EOK_occupation_mal
+		}
+		x = 23
+		y = 18
+
+	}
+	focus = {
+		id = EOK_ban_comme
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_demand_east_india
+		}
+		prerequisite = {
+			focus = EOK_demand_indochina
+		}
+		x = 13
+		y = 18
+
+	}
+	focus = {
+		id = EOK_clear_fascism
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_demand_east_india
+		}
+		prerequisite = {
+			focus = EOK_demand_indochina
+		}
+		x = 15
+		y = 18
+
+	}
+	focus = {
+		id = EOK_go_to_america
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_clear_europe
+			focus = EOK_europe_diplomacy
+		}
+		x = 18
+		y = 20
+
+	}
+	focus = {
+		id = EOK_europe_diplomacy
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_clear_fascism
+		}
+		prerequisite = {
+			focus = EOK_ban_comme
+		}
+		x = 14
+		y = 19
+
+	}
+	focus = {
+		id = EOK_clear_europe
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_attack_fascism
+		}
+		prerequisite = {
+			focus = EOK_attack_sov
+		}
+		x = 22
+		y = 19
+
+	}
+	focus = {
+		id = EOK_peace_america
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_go_to_america
+		}
+		mutually_exclusive = {
+			focus = EOK_war_with_usa
+		}
+		x = 13
+		y = 21
+
+	}
+	focus = {
+		id = EOK_war_with_usa
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_go_to_america
+		}
+		mutually_exclusive = {
+			focus = EOK_peace_america
+		}
+		x = 23
+		y = 21
+
+	}
+	focus = {
+		id = EOK_world_peace
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_peace_america
+		}
+		x = 13
+		y = 22
+
+	}
+	focus = {
+		id = EOK_great_tiger
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = EOK_war_with_usa
+		}
+		x = 23
+		y = 22
+
+	}
+}

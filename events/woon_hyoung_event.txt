@@ -1,0 +1,247 @@
+add_namespace = korea
+
+country_event = { #영친왕 국왕
+	id = korea.1
+	title = korea.1.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.1"}
+	desc = korea.1.d
+	picture =#
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.1.a
+		ai_chance = { factor = 100 }
+		custom_effect_tooltip = declar_kingdom_of_korea
+		hidden_effect = {
+			add_ideas = { KOR_king_yi_un1 }
+			set_cosmetic_tag = KOR_united_kingdom_of_korea
+		}
+	}
+}
+
+country_event = { #공산당 합작
+	id = korea.2
+	title = korea.2.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.2"}
+	desc = korea.2.d
+	picture = GFX_report_event_chamberlain_announce
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.2.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = { id = korea.3 days = 5 }
+		}
+	}
+}
+
+
+country_event = { #사회주의자 테러1
+	id = korea.3
+	title = korea.3.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.3"}
+	desc = korea.3.d
+	picture = GFX_report_event_ger_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.3.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { id = korea.4 days = 5 }
+		}
+		525 = {
+			damage_building = { type = industrial_complex damage = 1.0 }
+			damage_building = { type = arms_factory damage = 1.0 }
+			damage_building = { type = infrastructure damage = 1.0 }
+			hidden_effect = {
+				country_event = { id = korea.4 days = 5 }
+			}
+		}
+	}
+}
+
+country_event = { #사회주의자 테러2
+	id = korea.4
+	title = korea.4.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.4"}
+	desc = korea.4.d
+	picture = GFX_report_event_ger_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.4.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { id = korea.6 days = 5 }
+		}
+		811 = {
+			damage_building = { type = industrial_complex damage = 1.0 }
+			damage_building = { type = arms_factory damage = 1.0 }
+			damage_building = { type = infrastructure damage = 1.0 }
+		}
+	}
+	option = {
+		name = korea.4.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = { id = korea.5 days = 5 }
+		}
+		811 = {
+			damage_building = { type = industrial_complex damage = 1.0 }
+			damage_building = { type = arms_factory damage = 1.0 }
+			damage_building = { type = infrastructure damage = 1.0 }
+		}
+	}
+}
+
+country_event = { #박헌영 봉기
+	id = korea.5
+	title = korea.5.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.5"}
+	desc = korea.5.d
+	picture = GFX_report_event_ger_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.5.a
+		ai_chance = { factor = 100 }
+			complete_national_focus = KOR_dokrip_good
+			custom_effect_tooltip = KOR_comme_civil_war_tt
+			hidden_effect = {
+				PRK = {
+					add_state_core = 527
+					add_state_core = 525
+					add_state_core = 808
+					add_state_core = 809
+					add_state_core = 814
+					add_state_core = 807
+					transfer_state = 810
+					transfer_state = 527
+					declare_war_on = {
+						target = KOR
+						type = annex_everything
+					}
+				}
+			}	
+	}
+}
+
+country_event = { #사회주의자 테러3
+	id = korea.6
+	title = korea.6.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.6"}
+	desc = korea.6.d
+	picture = GFX_report_event_ger_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.6.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { id = korea.7 days = 5 }
+		}
+		809 = {
+			damage_building = { type = industrial_complex damage = 1.0 }
+			damage_building = { type = arms_factory damage = 1.0 }
+			damage_building = { type = infrastructure damage = 1.0 }
+		}
+	}
+	option = {
+		name = korea.6.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = { id = korea.5 days = 5 }
+		}
+		809 = {
+			damage_building = { type = industrial_complex damage = 1.0 }
+			damage_building = { type = arms_factory damage = 1.0 }
+			damage_building = { type = infrastructure damage = 1.0 }
+		}
+	}
+}
+
+country_event = { #사회주의자 테러4
+	id = korea.7
+	title = korea.7.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.7"}
+	desc = korea.7.d
+	picture = GFX_report_event_ger_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.7.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+		country_event = { id = korea.8 days = 5 }
+		}
+		812 = {
+			damage_building = { type = industrial_complex damage = 1.0 }
+			damage_building = { type = arms_factory damage = 1.0 }
+			damage_building = { type = infrastructure damage = 1.0 }
+		}
+	}
+	option = {
+		name = korea.7.b
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			country_event = { id = korea.5 days = 5 }
+		}
+		812 = {
+			damage_building = { type = industrial_complex damage = 1.0 }
+			damage_building = { type = arms_factory damage = 1.0 }
+			damage_building = { type = infrastructure damage = 1.0 }
+		}
+	}
+}
+
+country_event = { #공산당 해체
+	id = korea.8
+	title = korea.8.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.8"}
+	desc = korea.8.d
+	picture = GFX_report_event_ger_civil_war
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.8.a
+		ai_chance = { factor = 100 }
+		hidden_effect = {
+			add_popularity = {
+				ideology = communism
+				popularity = -1
+			}
+		}
+		complete_national_focus = KOR_dokrip_good
+	}
+}
+
+country_event = { #영국 불가침
+	id = korea.9
+	title = korea.9.t
+	immediate = "[GetDateText]: [Root.GetName]: event korea.9"}
+	desc = korea.9.d
+	picture = GFX_report_event_vienna_award_negotiations
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = korea.9.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+
+
+
+

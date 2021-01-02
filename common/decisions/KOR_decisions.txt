@@ -1,0 +1,140 @@
+KOR_attack_category = {
+
+	KOR_attack = {
+	
+	icon = generic_industry
+		allowed = {
+			original_tag = KOR  
+		}
+		available = {	
+			CHI = { exists = yes }
+        }
+
+		fire_only_once = yes
+
+		cost = 10
+		days_remove = 50
+		ai_will_do = {
+			factor = 0
+		}
+
+		remove_effect = {
+            declare_war_on = {
+		        target = CHI
+		        type = puppet_wargoal_focus
+			}
+		}
+	}
+}
+
+KOR_sanup_category = {
+	
+	KOR_sanup_good = {
+
+		icon = GFX_decision_category_infiltration
+        
+		allowed = {
+			    original_tag = KOR 
+		}
+
+		cost = 30
+		ai_will_do = {
+			factor = 5
+		}
+		
+		fire_only_once = no
+
+		available = {
+			original_tag = KOR
+		}
+		
+		days_remove = 95
+
+		remove_effect = {
+		
+		random_owned_controlled_state = {
+
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+
+				}
+			}
+		}
+	}
+	KOR_sanup_slots = {
+
+		icon = GFX_decision_category_infiltration
+        
+		allowed = {
+			    original_tag = KOR 
+		}
+
+		cost = 30
+		ai_will_do = {
+			factor = 5
+		}
+		
+		fire_only_once = no
+
+		available = {
+			original_tag = KOR
+		}
+		
+		days_remove = 95
+
+		remove_effect = {
+		
+		random_owned_controlled_state = {
+
+			add_extra_state_shared_building_slots = 1
+				instant_build = yes
+
+			}
+		}
+	}	
+}
+
+KOR_joungchuwon_category = {
+	
+	KOR_reform_joungchuwon = {
+	
+		icon = GFX_decision_category_generic
+		
+		available = {
+			has_completed_focus = EOK_return_joungchuwon
+		}
+
+		cost = 100	
+		
+		days_remove = 90
+		
+		visible = {
+			OR = {
+				has_idea = EOK_joungchuwon_na
+				has_idea = EOK_joungchuwon_na_2
+				has_idea = EOK_joungchuwon_na_3
+			}
+		}
+		remove_effect = {
+			if = {
+				limit = { has_idea = EOK_joungchuwon_na }
+				swap_ideas = {
+					remove_idea = EOK_joungchuwon_na
+					add_idea = EOK_joungchuwon_na_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = EOK_joungchuwon_na_2 }
+				swap_ideas = {
+					remove_idea = EOK_joungchuwon_na_2
+					add_idea = EOK_joungchuwon_na_3
+				}
+			}
+		}
+	}
+}
+	
+

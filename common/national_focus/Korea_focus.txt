@@ -1,0 +1,675 @@
+focus_tree = {
+	id = Starting_KOR_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = KOR
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = KOR_siyong
+		icon = GFX_focus_yi_tanhek_icon
+		cost = 4
+		x = 22
+		y = 0
+		completion_reward = {
+			custom_effect_tooltip = KOR_yi_tanhek_rhee_deheng
+			hidden_effect = {
+			retire_ideology_leader = democratic
+
+			create_country_leader = {
+				name = "국회 임시 내각"
+				desc = "KOR_imsi_DESC"
+				picture = "gfx/leaders/KOR/KOR_joongchu.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+				#
+				}
+			}
+			news_event = { id = KOR.1 }
+		}
+	}
+}
+	focus = {
+		id = KOR_rhee_de
+		icon = GFX_focus_sunger_icon
+		cost = 6.00
+		prerequisite = {
+			focus = KOR_siyong
+		}
+		x = 22
+		y = 1
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = KOR_election_tt
+		hidden_effect = {
+			country_event = { 
+				id = KOR.3 
+				days = 5
+			}
+		}
+	}
+}
+	focus = {
+		id = KOR_1936_vote
+		icon = GFX_focus_kor_fl_icon
+		cost = 0.00
+		available = {
+			always = no
+			
+		}
+		prerequisite = {
+			focus = KOR_rhee_de
+		}
+		x = 22
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = KOR_sunger.tt
+			add_stability = 0.05
+		
+		}
+
+	}
+	focus = {
+		id = KOR_cudeta
+		icon = GFX_goal_unknown
+		cost = 0
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_1936_vote
+		}
+		x = 8
+		y = 3
+
+	}
+	focus = {
+		id = KOR_old
+		icon = GFX_focus_king_back
+		cost = 0
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_1936_vote
+		}
+		x = 17
+		y = 3
+		completion_reward = {
+			remove_ideas = KOR_democratic1
+			set_cosmetic_tag = KOR_provisional_kingdom
+			set_politics = {
+				ruling_party = neutrality
+			}
+			set_popularities = {
+				democratic = 27
+				neutrality = 63
+				fascism = 8
+				communism = 2
+			}
+		}
+
+	}
+	focus = {
+		id = KOR_prepare_fix_law
+		icon = GFX_focus_prepare_fix_law_icon
+		cost = 5.00
+		available = {
+			KOR_congress_low_support_trigger = yes
+		}
+		prerequisite = {
+			focus = KOR_old
+		}
+		x = 17
+		y = 4
+		completion_reward = {
+			KOR_congress_medium_opposition = yes
+			country_event = { id = KOR.6 }
+		}
+
+	}	
+	focus = {
+		id = KOR_Vollmacht
+		icon = GFX_focus_Vollmacht_icon
+		cost = 0.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_prepare_fix_law
+		}
+		x = 15
+		y = 5
+		completion_reward = {
+			add_stability = -0.1
+			add_war_support = 0.05
+		
+			modifier = {
+				conscription = 0.015
+			}
+		}
+	}
+	focus = {
+		id = KOR_intervention_economy
+		icon = GFX_focus_intervention_economy_icon
+		cost = 3.00
+		prerequisite = {
+			focus = KOR_prepare_fix_law
+		}
+		x = 19
+		y = 5
+		completion_reward = {
+			add_stability = -0.03
+			add_war_support = 0.04
+			swap_ideas = {
+				remove_idea = KOR_kor_fuck_cro
+				add_idea = KOR_kor_fuck_cro1
+			}
+		}
+
+	}
+	focus = {
+		id = KOR_proposal_law
+		icon = GFX_focus_hunbub_sujung
+		cost = 0
+		prerequisite = {
+			focus = KOR_intervention_economy
+		}
+		prerequisite = {
+			focus = KOR_Vollmacht
+		}
+		x = 17
+		y = 6
+		completion_reward = {
+			country_event = KOR.14
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
+		}
+
+	}
+	focus = {
+		id = KOR_civilwar
+		icon = GFX_focus_banran_icon
+		cost = 7.00
+		prerequisite = {
+			focus = KOR_proposal_law
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOR_king_civil_war_tt
+			remove_from_faction = KOR_TO_REMOVE
+			country_event = KOR.10
+			hidden_effect = {
+				load_focus_tree = Imperial_Korea
+				ROK = {
+					transfer_state = 809
+					transfer_state = 808
+					transfer_state = 807
+					add_core_of = 525
+					add_core_of = 808
+					add_core_of = 809
+					add_core_of = 814
+					add_core_of = 807
+					declare_war_on = {
+						target = KOR
+						type = annex_everything
+					}
+				}
+			}
+		}
+		x = 17
+		y = 7
+
+	}
+	focus = {
+		id = KOR_free_congress
+		icon = GFX_focus_syngman_rhee
+		cost = 0.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_1936_vote
+		}
+		x = 24
+		y = 3
+		completion_reward = {
+			custom_effect_tooltip = KOR_rhee_traits_revolution
+			hidden_effect = {
+				create_country_leader = {
+					name = "이승만"
+					desc = "KOR_RHEE_DESC"
+					picture = "gfx/leaders/KOR/KOR_Rhee.dds"
+					expire = "1965.1.1"
+					ideology = conservatism
+					traits = {
+						detongryong
+						demo_kor
+					}
+				}
+			}
+			
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.3
+			}
+		add_stability = 0.07
+		add_war_support = 0.03
+		}
+	}
+	focus = {
+		id = KOR_rhee_unam_revolution
+		icon = GFX_focus_rhee_revolution_complete_icon
+		cost = 5.00
+		available = {
+			KOR_congress_low_support_trigger = yes
+		}
+		prerequisite = {
+			focus = KOR_free_congress
+		}
+		x = 24
+		y = 4
+		completion_reward = {
+			custom_effect_tooltip = KOR_rhee_congress_revolution_tt
+			KOR_congress_small_support = yes
+			hidden_effect = {
+				country_event = { 
+					id = KOR.7
+					days = 5
+				}
+			}
+		}
+	}
+	focus = {
+		id = KOR_gongd
+		icon = GFX_goal_unknown
+		cost = 0.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_rhee_unam_revolution
+		}
+		x = 22
+		y = 5
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = KOR_kor_fuck_cro
+				add_idea = KOR_kor_fuck_cro1 
+			}
+		}
+
+	}
+	focus = {
+		id = KOR_sookchung
+		icon = GFX_goal_unknown
+		cost = 0.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_rhee_unam_revolution
+		}
+		x = 26
+		y = 5
+		completion_reward = {
+			custom_effect_tooltip = KOR_chubang_park_tt
+			complete_national_focus = KOR_minju
+			hidden_effect = {
+				country_event = { 
+					id = KOR.13
+					days = 1
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = KOR_minju
+		icon = GFX_goal_Centralised_Government
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_sookchung
+		}
+		prerequisite = {
+			focus = KOR_gongd
+		}
+		x = 24
+		y = 6
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.15
+			}
+				add_stability = 0.01
+		}
+	}
+	focus = {
+		id = KOR_minjujui
+		icon = GFX_focus_KOR_democratic_defence_icon
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_minju
+		}
+		x = 24
+		y = 7
+		completion_reward = {
+			custom_effect_tooltip = KOR_democratic_defence.tt
+			add_stability = 0.05
+				hidden_effect = {
+					load_focus_tree = I19_RHee_kor_focus
+				}
+		}
+	}
+	focus = {
+		id = KOR_comme_win
+		icon = GFX_goal_unknown
+		cost = 5.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_1936_vote
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = communism
+			}
+			set_popularities = {
+				democratic = 20
+				neutrality = 15
+				fascism = 2
+				communism = 63
+			}
+		}
+		x = 31
+		y = 3
+
+	}
+	focus = {
+		id = KOR_start_rev
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_comme_win
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+		x = 31
+		y = 4
+
+	}
+	focus = {
+		id = KOR_strong_leader
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_start_rev
+		}
+		completion_reward = {
+			add_stability = 0.1
+		}
+		x = 29
+		y = 5
+
+	}
+	focus = {
+		id = KOR_goonbu_kill
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_start_rev
+		}
+		completion_reward = {
+			country_event = KOR.8
+		}
+		x = 33
+		y = 5
+
+	}
+	focus = {
+		id = KOR_oppose_park
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_strong_leader
+		}
+		prerequisite = {
+			focus = KOR_goonbu_kill
+		}
+		completion_reward = {
+			custom_effect_tooltip = KOR_oppose_park_hun_young
+			hidden_effect = {
+				set_cosmetic_tag = KOR_lee_military_junta
+				set_politics = { ruling_party = neutrality elections_allowed = no }
+				set_party_name = {
+				ideology = neutrality
+					long_name = KOR_military_junta
+					name = KOR_lee_military_junta
+				}
+				create_country_leader = {
+					name = "이범석"
+					desc = ""
+					picture = "gfx/leaders/KOR/KOR_Beom.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						#
+					}
+				}
+				country_event = { 
+					id = KOR.9
+					days = 5
+				}
+		
+			}
+		}
+		x = 31
+		y = 6
+
+	}
+	focus = {
+		id = KOR_start_civilwar
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_oppose_park
+		}
+		available = {
+			always = no
+		}
+		x = 31
+		y = 7
+
+	}
+	focus = {
+		id = KOR_left_plus
+		icon = GFX_goal_unknown
+		cost = 5.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_1936_vote
+		}
+		completion_reward = {
+		custom_effect_tooltip = KOR_win_woon_bro
+			hidden_effect = {
+				set_party_name = {
+				ideology = democratic
+					long_name = KOR_woonbro
+					name = KOR_woonbro_party
+				}
+			
+
+			create_country_leader = {
+				name = "여운형"
+				desc = ""
+				picture = "gfx/leaders/KOR/yownbro.dds"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+				#
+				}
+			}
+		}
+		}
+		x = 39
+		y = 3
+
+	}
+	focus = {
+		id = KOR_un_ju
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_left_plus
+		}
+		available = {
+			KOR_congress_low_support_trigger = yes
+		}
+		completion_reward = {
+			country_event = korea.1
+			KOR_congress_small_opposition = yes
+		}
+		x = 39
+		y = 4
+
+	}
+	focus = {
+		id = KOR_why_war
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_un_ju
+		}
+		completion_reward = {
+			country_event = korea.2
+			KOR_congress_small_support = yes
+		}
+		x = 37
+		y = 5
+
+	}
+	focus = {
+		id = KOR_no_bun
+		icon = GFX_goal_unknown
+		cost = 1.00
+		prerequisite = {
+			focus = KOR_un_ju
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+		x = 41
+		y = 5
+
+	}
+	focus = {
+		id = KOR_dokrip_good
+		icon = GFX_goal_unknown
+		cost = 5.00
+		available = {
+			always = no
+		}
+		prerequisite = {
+			focus = KOR_why_war
+		}
+		prerequisite = {
+			focus = KOR_no_bun
+		}
+		x = 39
+		y = 6
+
+	}
+	focus = {
+		id = KOR_jijung
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_cudeta
+		}
+		x = 8
+		y = 4
+
+	}
+	focus = {
+		id = KOR_lee_goonbu
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_jijung
+		}
+		mutually_exclusive = {
+			focus = KOR_Ji_goonbu
+		}
+		x = 10
+		y = 5
+
+	}
+	focus = {
+		id = KOR_Ji_goonbu
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_jijung
+		}
+		mutually_exclusive = {
+			focus = KOR_lee_goonbu
+		}
+		x = 6
+		y = 5
+
+	}
+	focus = {
+		id = KOR_daehanguk
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_Ji_goonbu
+			focus = KOR_lee_goonbu
+		}
+		x = 8
+		y = 6
+
+	}
+	focus = {
+		id = KOR_gongguk
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = KOR_daehanguk
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = KOR_good_daehan
+		icon = GFX_goal_unknown
+		cost = 1.00
+		available = {
+			is_puppet = no
+			has_war = no
+		}
+		prerequisite = {
+			focus = KOR_dokrip_good
+		}
+		completion_reward = {
+			load_focus_tree = social_liberal_korea
+		}
+		x = 39
+		y = 7
+
+	}
+}

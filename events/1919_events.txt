@@ -1,0 +1,2313 @@
+add_namespace = KOR
+
+country_event = { #이시영 탄핵 뉴스 이벤트
+	id = KOR.1
+	title = KOR.1.t
+	immediate = "[GetDateText]: [Root.GetName]: event KOR.1"}
+	desc = KOR.1.d
+	picture = GFX_report_event_election_vote
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+        tag = KOR
+		has_complete_focus = KOR_siyong
+	}	
+	
+	option = {
+		name = KOR.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { #1936년 선거 시작
+	id = KOR.3
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.3"}
+	title = KOR.3.t
+	desc = KOR.3.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.3.a
+		ai_chance = { base = 1 }
+		country_event = { id = KOR.4 }
+		days = 2
+		complete_national_focus = KOR_1936_vote
+	}
+}
+
+country_event = { #1936년 선거
+	id = KOR.4
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.4"}
+	title = KOR.4.t
+	desc = KOR.4.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #이승만 당선
+		name = KOR.4.a
+		ai_chance = { base = 1 }
+		complete_national_focus = KOR_free_congress
+	}
+	option = { #영친왕 당선
+		name = KOR.4.b
+		ai_chance = { base = 1 }
+		complete_national_focus = KOR_old
+	}
+	option = { #여운형 당선
+		name = KOR.4.c
+		ai_chance = { base = 1 }
+		complete_national_focus = KOR_left_plus
+	}
+	option = { #박헌영 당선
+		name = KOR.4.e
+		ai_chance = { base = 1 }
+		complete_national_focus = KOR_comme_win
+	}
+}
+
+country_event = { #왕당파 내전 공산당 개입
+	id = KOR.5
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.5"}
+	title = KOR.5.t
+	desc = KOR.5.desc
+	#picture = 
+	
+	trigger = {
+		tag = KOR
+		KOR = {
+			has_war_with = ROK
+		}
+	}
+	fire_only_once = yes
+	
+	option = { #북한 반란
+		name = KOR.5.a
+		ai_chance = { base = 1 }
+			custom_effect_tooltip = KOR_comme_civil_war_tt
+			hidden_effect = {
+				PRK = {
+					add_state_core = 527
+					add_state_core = 525
+					add_state_core = 808
+					add_state_core = 809
+					add_state_core = 814
+					add_state_core = 807
+					transfer_state = 810
+					transfer_state = 527
+					declare_war_on = {
+						target = KOR
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = ROK
+						type = annex_everything
+					}
+				}
+			}	
+		}
+	option = { #북한으로 플레이
+		name = KOR.5.b
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			PRK = { change_tag_from = KOR }
+			PRK = {
+				add_state_core = 525
+				add_state_core = 527
+				add_state_core = 808
+				add_state_core = 809
+				add_state_core = 814
+				add_state_core = 807
+				transfer_state = 810
+				transfer_state = 527
+				declare_war_on = {
+					target = KOR
+					type = annex_everything
+				}
+				declare_war_on = {
+					target = ROK
+					type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+country_event = { #개헌안 이벤트
+	id = KOR.6
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.6"}
+	title = KOR.6.t
+	desc = KOR.6.desc
+	picture = KOR_democratic
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.6.a
+		ai_chance = { base = 1 }
+		add_stability = -0.1
+		complete_national_focus = KOR_Vollmacht
+	}
+}
+country_event = { #이승만 개혁 이벤트
+	id = KOR.7
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.7"}
+	title = KOR.7.t
+	desc = KOR.7.desc
+	picture = KOR_Rhee
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #개혁 확인
+		name = KOR.7.a
+		ai_chance = { base = 1 }
+		hidden_effect = {
+			country_event = { 
+				id = KOR.11
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = { #군부 처형
+	id = KOR.8
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.8"}
+	title = KOR.8.t
+	desc = KOR.8.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.8.a
+		ai_chance = { base = 1 }
+		add_manpower = -500
+		
+	}
+}
+
+country_event = { #박헌영 쿠데타 시작
+	id = KOR.9
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.9"}
+	title = KOR.9.t
+	desc = KOR.9.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.9.a
+		ai_chance = { base = 1 }
+		custom_effect_tooltip = KOR_comme_civil_war2_tt
+			hidden_effect = {
+				complete_national_focus = KOR_start_civilwar
+				PRK = { change_tag_from = KOR }
+				PRK = {
+					add_state_core = 527
+					add_state_core = 525
+					add_state_core = 808
+					add_state_core = 809
+					add_state_core = 814
+					add_state_core = 807
+					transfer_state = 810
+					transfer_state = 527
+					declare_war_on = {
+						target = KOR
+						type = annex_everything
+					}
+				}
+			}
+		
+	}
+}
+
+country_event = { #입헌파의 반란
+	id = KOR.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.10"}
+	title = KOR.10.t
+	desc = KOR.10.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.10.a
+		ai_chance = { base = 1 }
+	}
+}
+
+country_event = { #우남 개혁- 대공황 극복
+	id = KOR.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.11"}
+	title = KOR.11.t
+	desc = KOR.11.desc
+	picture = report_event_chinese_soldiers_mountain
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { #
+		name = KOR.11.a
+		ai_chance = { base = 1 }
+		custom_effect_tooltip = KOR_revolution_kor.tt
+		complete_national_focus = KOR_gongd
+		hidden_effect = {
+			country_event = { 
+				id = KOR.12 
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = { #우남개혁 - 멸공
+	id = KOR.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.12"}
+	title = KOR.12.t
+	desc = KOR.12.desc
+	picture = report_event_tank_factory
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.12.a
+		ai_chance = { base = 1 }
+		complete_national_focus = KOR_sookchung
+	}
+}
+
+country_event = { #박헌영 무리의 반란
+	id = KOR.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.13"}
+	title = KOR.13.t
+	desc = KOR.13.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.13.a
+		ai_chance = { base = 1 }
+		custom_effect_tooltip = KOR_comme_civil_war2_tt
+		hidden_effect = {
+			complete_national_focus = KOR_minjujui
+			KOR = { delete_unit = { 
+				state =  525          
+				 disband = yes 
+				 	}
+				}
+				KOR = { delete_unit = { 
+					state = 527    
+					 disband = yes 
+						 }
+					}
+					KOR = { delete_unit = { 
+						state = 807       
+						 disband = yes 
+							 }
+						}
+						KOR = { delete_unit = { 
+							state = 808         
+							 disband = yes 
+								 }
+							}	
+							KOR = { delete_unit = { 
+								state = 809         
+								 disband = yes 
+									 }
+								}
+								KOR = { delete_unit = { 
+									state = 810        
+									 disband = yes 
+										 }
+									}
+									KOR = { delete_unit = { 
+										state = 811      
+										 disband = yes 
+											 }
+										}
+										KOR = { delete_unit = { 
+											state = 812          
+											 disband = yes 
+												 }
+											}
+											KOR = { delete_unit = { 
+												state = 813         
+												 disband = yes 
+													 }
+												}
+												KOR = { delete_unit = { 
+													state = 814       
+													 disband = yes 
+														 }
+													}
+			525 = {
+				create_unit = {
+					division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+					owner = KOR
+				}
+				create_unit = {
+					division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+					owner = KOR
+				}
+				create_unit = {
+					division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+					owner = KOR
+				}
+				create_unit = {
+					division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+					owner = KOR
+				}
+				create_unit = {
+					division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+					owner = KOR
+				}
+				create_unit = {
+					division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+					owner = KOR
+				}
+				create_unit = {
+					division = "name = \"시위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+					owner = KOR
+				}
+			}
+			PRK = {
+				add_state_core = 527
+				add_state_core = 525
+				add_state_core = 808
+				add_state_core = 809
+				add_state_core = 814
+				add_state_core = 807
+				transfer_state = 810
+			transfer_state = 527
+			declare_war_on = {
+				target = KOR
+				type = annex_everything
+				}
+			}
+		}
+	}
+}
+
+country_event = { #이강 대통령 개헌안 발의
+	id = KOR.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.14"}
+	title = KOR.14.t
+	desc = KOR.14.desc
+	picture = GFX_report_event_election_vote
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.14.a
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.15"}
+	title = KOR.15.t
+	desc = KOR.15.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.15.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.15.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.16"}
+	title = KOR.16.t
+	desc = KOR.16.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.16.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.16.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.17
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.17"}
+	title = KOR.17.t
+	desc = KOR.17.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.17.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.17.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.18
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.18"}
+	title = KOR.18.t
+	desc = KOR.18.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.18.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.18.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.19
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.19"}
+	title = KOR.19.t
+	desc = KOR.19.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.19.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.19.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.20
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.20"}
+	title = KOR.20.t
+	desc = KOR.20.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.20.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.20.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.21
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.21"}
+	title = KOR.21.t
+	desc = KOR.21.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.21.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.21.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.22
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.22"}
+	title = KOR.22.t
+	desc = KOR.22.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.22.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.22.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.23
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.23"}
+	title = KOR.23.t
+	desc = KOR.23.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.23.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.23.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.24
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.24"}
+	title = KOR.24.t
+	desc = KOR.24.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.24.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.24.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.25
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.25"}
+	title = KOR.25.t
+	desc = KOR.25.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.25.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.25.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.26
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.26"}
+	title = KOR.26.t
+	desc = KOR.26.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.26.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.26.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.27
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.27"}
+	title = KOR.27.t
+	desc = KOR.27.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.27.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.27.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.28
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.28"}
+	title = KOR.28.t
+	desc = KOR.28.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.28.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.28.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.29
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.29"}
+	title = KOR.29.t
+	desc = KOR.29.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.29.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.29.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.30
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.30"}
+	title = KOR.30.t
+	desc = KOR.30.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.30.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.30.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.31
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.31"}
+	title = KOR.31.t
+	desc = KOR.31.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.31.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.31.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.32
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.32"}
+	title = KOR.32.t
+	desc = KOR.32.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.32.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.32.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.33
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.33"}
+	title = KOR.33.t
+	desc = KOR.33.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.33.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.33.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.34
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.34"}
+	title = KOR.34.t
+	desc = KOR.34.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.34.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.34.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.35
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.35"}
+	title = KOR.35.t
+	desc = KOR.35.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.35.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.35.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.36"}
+	title = KOR.36.t
+	desc = KOR.36.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.36.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.36.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.37
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.37"}
+	title = KOR.37.t
+	desc = KOR.37.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.37.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.37.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.38
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.38"}
+	title = KOR.38.t
+	desc = KOR.38.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.38.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.38.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.39
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.39"}
+	title = KOR.39.t
+	desc = KOR.39.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.39.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.39.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.40
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.40"}
+	title = KOR.40.t
+	desc = KOR.40.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.40.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.40.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.41
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.41"}
+	title = KOR.41.t
+	desc = KOR.41.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.41.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.41.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.42
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.42"}
+	title = KOR.42.t
+	desc = KOR.42.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.42.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.42.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.43
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.43"}
+	title = KOR.43.t
+	desc = KOR.43.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.43.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.43.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.44
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.44"}
+	title = KOR.44.t
+	desc = KOR.44.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.44.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.44.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.45
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.45"}
+	title = KOR.45.t
+	desc = KOR.45.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.45.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.45.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.46
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.46"}
+	title = KOR.46.t
+	desc = KOR.46.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.46.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.46.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.47
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.47"}
+	title = KOR.47.t
+	desc = KOR.47.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.47.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.47.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.48
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.48"}
+	title = KOR.48.t
+	desc = KOR.48.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.48.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.48.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.49
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.49"}
+	title = KOR.49.t
+	desc = KOR.49.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.49.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.49.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.50
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.50"}
+	title = KOR.50.t
+	desc = KOR.50.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.50.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.50.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.51
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.51"}
+	title = KOR.51.t
+	desc = KOR.51.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.51.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.51.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.52
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.52"}
+	title = KOR.52.t
+	desc = KOR.52.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.52.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.52.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.53
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.53"}
+	title = KOR.53.t
+	desc = KOR.53.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.53.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.53.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.54
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.54"}
+	title = KOR.54.t
+	desc = KOR.54.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.54.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.54.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.55
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.55"}
+	title = KOR.55.t
+	desc = KOR.55.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.55.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.55.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.56
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.56"}
+	title = KOR.56.t
+	desc = KOR.56.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.56.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.56.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.57
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.57"}
+	title = KOR.57.t
+	desc = KOR.57.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.57.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.57.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.58
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.58"}
+	title = KOR.58.t
+	desc = KOR.58.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.58.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.58.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.59
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.59"}
+	title = KOR.59.t
+	desc = KOR.59.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.59.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.59.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.60
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.60"}
+	title = KOR.60.t
+	desc = KOR.60.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.60.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.60.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.61
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.61"}
+	title = KOR.61.t
+	desc = KOR.61.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.61.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.61.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.62
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.62"}
+	title = KOR.62.t
+	desc = KOR.62.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.62.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.62.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.63
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.63"}
+	title = KOR.63.t
+	desc = KOR.63.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.63.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.63.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.64
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.64"}
+	title = KOR.64.t
+	desc = KOR.64.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.64.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.64.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.65
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.65"}
+	title = KOR.65.t
+	desc = KOR.65.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.65.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.65.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.66
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.66"}
+	title = KOR.66.t
+	desc = KOR.66.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.66.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.66.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.67
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.67"}
+	title = KOR.67.t
+	desc = KOR.67.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.67.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.67.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.68
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.68"}
+	title = KOR.68.t
+	desc = KOR.68.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.68.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.68.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.69
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.69"}
+	title = KOR.69.t
+	desc = KOR.69.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.69.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.69.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.70
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.70"}
+	title = KOR.70.t
+	desc = KOR.70.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.70.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.70.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.71
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.71"}
+	title = KOR.71.t
+	desc = KOR.71.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.71.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.71.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.72
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.72"}
+	title = KOR.72.t
+	desc = KOR.72.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.72.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.72.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.73
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.73"}
+	title = KOR.73.t
+	desc = KOR.73.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.73.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.73.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.74
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.74"}
+	title = KOR.74.t
+	desc = KOR.74.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.74.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.74.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.75
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.75"}
+	title = KOR.75.t
+	desc = KOR.75.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.75.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.75.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.76
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.76"}
+	title = KOR.76.t
+	desc = KOR.76.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.76.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.76.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.77
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.77"}
+	title = KOR.77.t
+	desc = KOR.77.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.77.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.77.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.78
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.78"}
+	title = KOR.78.t
+	desc = KOR.78.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.78.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.78.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.79
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.79"}
+	title = KOR.79.t
+	desc = KOR.79.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.79.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.79.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.80
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.80"}
+	title = KOR.80.t
+	desc = KOR.80.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.80.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.80.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.81
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.81"}
+	title = KOR.81.t
+	desc = KOR.81.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.81.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.81.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.82
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.82"}
+	title = KOR.82.t
+	desc = KOR.82.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.82.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.82.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.83
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.83"}
+	title = KOR.83.t
+	desc = KOR.83.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.83.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.83.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.84
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.84"}
+	title = KOR.84.t
+	desc = KOR.84.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.84.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.84.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.85
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.85"}
+	title = KOR.85.t
+	desc = KOR.85.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.85.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.85.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.86
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.86"}
+	title = KOR.86.t
+	desc = KOR.86.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.86.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.86.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.87
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.87"}
+	title = KOR.87.t
+	desc = KOR.87.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.87.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.87.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.88
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.88"}
+	title = KOR.88.t
+	desc = KOR.88.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.88.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.88.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.89
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.89"}
+	title = KOR.89.t
+	desc = KOR.89.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.89.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.89.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.90
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.90"}
+	title = KOR.90.t
+	desc = KOR.90.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.90.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.90.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.91
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.91"}
+	title = KOR.91.t
+	desc = KOR.91.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.91.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.91.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.92
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.92"}
+	title = KOR.92.t
+	desc = KOR.92.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.92.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.92.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.93
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.93"}
+	title = KOR.93.t
+	desc = KOR.93.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.93.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.93.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.94
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.94"}
+	title = KOR.94.t
+	desc = KOR.94.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.94.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.94.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.95
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.95"}
+	title = KOR.95.t
+	desc = KOR.95.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.95.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.95.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.96
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.96"}
+	title = KOR.96.t
+	desc = KOR.96.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.96.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.96.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.97
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.97"}
+	title = KOR.97.t
+	desc = KOR.97.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.97.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.97.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.98
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.98"}
+	title = KOR.98.t
+	desc = KOR.98.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.98.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.98.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.99
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.99"}
+	title = KOR.99.t
+	desc = KOR.99.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.99.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.99.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+
+country_event = { #
+	id = KOR.100
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.100"}
+	title = KOR.100.t
+	desc = KOR.100.desc
+	#picture = 
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #
+		name = KOR.100.a
+		ai_chance = { base = 1 }
+		
+	}
+	option = { #
+		name = KOR.100.b
+		ai_chance = { base = 1 }
+		
+	}
+}
+

@@ -1,0 +1,35 @@
+﻿l_english:
+KOR_sanup_category:0 "5개년 계획"
+KOR_sanup_big:0 "군수 확충"
+KOR_sanup_big_desc:0 "우리의 군수업은 낙후되었습니다. 여기에 투자해야 합니다."
+KOR_sanup_good:0 "민간업 투자"
+KOR_sanup_good_desc:0 "우리는 건설을 하기엔 공장이 부족합니다. 민간업에 투자합시다."
+KOR_sanup_slots:0 "구식 건물 철거"
+KOR_sanup_slots_desc:0 "땅만 차지하는 건물들은 모두 제거하여 공간을 마련해야 합니다."
+KOR_attack_category:0 "대외 정책 검토"
+KOR_attack:0 "중국과의 전쟁"
+KOR_attack_desc:0 "우리는 항상 침략 받았습니다. 고려때부터 지금까지 말입니다. 복수의 시간입니다! 신 강대국 미국과 함께 저들을 무찔릅시다."
+KOR_economy_reform_category:0 "경제 개혁"
+KOR_reform_economy_plan:0 "5개년 계획"
+KOR_joungchuwon_category:0 "중추원"
+KOR_reform_joungchuwon:0 "중추원 개혁"
+
+
+############대한국 의회#############
+KOR_congress:0 "대한국 국회"
+KOR_congress_desc:0 "한국의 국회는 미국의 영향으로 양원제를 채택하였습니다. 대통령이 무한한 권력을 휘두르며 독재를 하는것을 막기 위해 반드시 그들의 지지가 있어야 합니다."
+
+KOR_congress_senate_support_header:0 "§H참의원 지지도§!"
+KOR_congress_senate_support_amount:0 "§G[?KOR.senate_support]§! / §Y[?KOR.senate_total]§!"
+KOR_congress_house_support_header:0 "§H민의원 지지도§!"
+KOR_congress_house_support_amount:0 "§G[?KOR.house_support]§! / §Y[?KOR.house_total]§!"
+ 
+mtg_KOR_congress_small_support_tt:0 "§Y소규모의 정치인들§!이 정부를 §G지지§!할 것입니다.\n"
+mtg_KOR_congress_small_opposition_tt:0 "§Y소규모의 정치인들§!이 §R반대파§!로 돌아설것입니다.\n"
+mtg_KOR_congress_medium_support_tt:0 "§Y보다 많은 정치인들§!이 정부를 §G지지§!할 것입니다."
+mtg_KOR_congress_medium_opposition_tt:0 "§Y보다 많은 정치인들§!이 §R반대파§!로 돌아설것입니다.\n"
+mtg_KOR_congress_large_support_tt:0 "§Y상당수의 정치인들§!이 정부를 §G지지§!할 것입니다.\n"
+mtg_KOR_congress_large_opposition_tt:0 "§Y상당수의 정치인들§!이 §R반대파§!로 돌아설것입니다.\n"
+KOR_congress_low_support_trigger_tt:1 "최소 §Y[?KOR.quorum_low] 참의원§! (현재: [?KOR.senate_support]) 그리고 §Y174 민의원§! (현재: [?KOR.house_support])의 지지도 필요함\n"
+KOR_congress_medium_support_trigger_tt:1 "최소 §Y[?KOR.quorum_medium] 참의원§! (현재: [?KOR.senate_support]) 그리고 §Y218 민의원§! (현재: [?KOR.house_support])의 지지도 필요함\n"
+KOR_congress_high_support_trigger_tt:1 "최소 §Y[?KOR.quorum_high] 참의원§! (현재: [?KOR.senate_support]) 그리고 §Y261 민의원§! (현재: [?KOR.house_support])의 지지도 필요함\n"

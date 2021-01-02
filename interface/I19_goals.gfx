@@ -1,0 +1,50 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_syngman_rhee"
+		texturefile = "gfx/interface/goals/KOR/focus_syngman_rhee.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_yi_tanhek_icon"
+		texturefile = "gfx/interface/goals/focus_yi_tanhek_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_kor_fl_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_kor_fl_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_king_back"
+		texturefile = "gfx/interface/goals/KOR/focus_king_back.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_prepare_fix_law_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_prepare_fix_law_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_intervention_economy_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_intervention_economy_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_sunger_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_sunger_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_banran_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_banran_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_hunbub_sujung"
+		texturefile = "gfx/interface/goals/KOR/focus_hunbub_sujung.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_Vollmacht_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_Vollmacht_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_rhee_revolution_complete_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_rhee_revolution_complete_icon.dds"
+	}
+	SpriteType = {
+		name = "GFX_focus_KOR_democratic_defence_icon"
+		texturefile = "gfx/interface/goals/KOR/focus_KOR_democratic_defence_icon.dds"
+	}
+}

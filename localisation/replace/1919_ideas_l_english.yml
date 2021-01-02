@@ -1,0 +1,103 @@
+﻿l_english:
+#한국 컨트리 아이디어 (국민정신)
+KOR_kor_fuck_cro:0 "경제 위기"
+KOR_kor_fuck_cro_desc:0 "우리는 미국의 경제 대공황이 닥쳐오자 엄청난 피해를 입었습니다. 이를 해결해야합니다."
+KOR_kor_yea:0 "자주독립국"
+
+KOR_kor_yea_desc:0 "우리는 독립했습니다! 일제의 손에 벗어나고, 자주 독립을 했습니다! "
+KOR_kor_fuck_cro1:0 "경제 위기"
+KOR_kor_fuck_cro1_desc:0 "우리는 개혁으로 대공황을 조금 극복했지만 아직 먼 길이 남아있습니다."
+KOR_kor_fuck_cro_2:0 "완화되는 경제 위기"
+
+#왕실 관련 국민정신
+EOK_secret_police1:0 "임시 비밀경찰"
+EOK_prime_minister_lee:0 "국무총리 이범석"
+EOK_royal_laws:0 "왕실법"
+EOK_joungchuwon_na:0 "중추원"
+EOK_joungchuwon_na_2:0 "중추원"
+EOK_joungchuwon_na_3:0 "중추원"
+EOK_secret_police2:0 "왕국 비밀경찰"
+EOK_secret_police3:0 "왕국 비밀경찰"
+EOK_for_the_king:0 "상제는 국왕폐하를 도우소서!"
+
+#여운형 루트 국민정신#
+ KOR_king_yi_un1:0 "국왕 이은"
+ KOR_king_yi_un1_desc:0 "한국의 제 28대 국왕 이은은 대한의 자존심임과 동시에 좋은 성품으로 대한국 국민에게 귀감이 되고 대한국 국민을 단결시켜주는 국왕입니다."
+ KOR_rewriting_law:0 "대한국 국제"
+ KOR_rewriting_law_2:0 "대한국 국제"
+ KOR_rewriting_law_3:0 "대한국 국제"
+ KOR_lee_minster_of_deffence:0 "이범석 국방장관"
+ 
+####정치 조언가####
+ KOR_advisor_yi_kang:0 "이강"
+ KOR_advisor_KOR_Beomseok_lee:0 "이범석"
+ KOR_advisor_syngman_rhee:0 "이승만"
+ KOR_advisor_ryuh_woonhyung:0 "여운형"
+ KOR_advisor_kim_sung_su:0 "김성수"
+ KOR_advisor_kim_koo:0 "김구"
+ KOR_advisor_guak_sang_hun:0 "곽상훈"
+ KOR_advisor_an_chang_ho:0 "안창호"
+ KOR_advisor_yi_gun:0 "이건"
+ KOR_advisor_yi_si_young:0 "이시영"
+ 
+  ### 기업 ###
+ KOR_add_fast:0 "국방과학연구소 - 기동전차 연구부"
+ KOR_add_medium:0 "국방과학연구소 - 중형전차 연구부"
+ KOR_add_heavy:0 "국방과학연구소 - 중전차 연구부"
+ KOR_hyundai_pacific:0 "현대중공업 - 태평양 함대 사업부"
+ KOR_hyundai_coastal:0 "현대중공업 - 연안방어 함대 사업부"
+ KOR_hyundai_escort:0 "현대중공업 - 호위 함대 사업부"
+ KOR_sekwang:0 "세광조선"
+ KOR_kai_light:0 "KAI - 경전투기 설계부"
+ KOR_kai_medium:0 "KAI - 중전투기 설계부"
+ KOR_kai_heavy:0 "KAI - 폭격기 설계부"
+ KOR_st:0 "대우정밀공업"
+ KOR_kepco:0 "한국전력공사"
+ KOR_posco:0 "포항종합제철주식회사"
+ 
+  ### 정치고문 ###
+ KOR_jo_so_ang:0 "조소앙"
+ three_equalities:0 "삼균주의자"
+ KOR_syngman_rhee:0 "이승만"
+ KOR_yi_un:0 "영친왕 이은"
+ KOR_yi_kang_2:0 "의친왕 이강"
+ KOR_an_ho_sang:0 "안호상"
+ KOR_sin_ik_hui:0 "신익희"
+ KOR_kim_koo:0 "김구"
+ KOR_ilhan_new:0 "유일한"
+ KOR_chang_myon:0 "장면"
+ KOR_hong_jin:0 "홍진"
+ KOR_ahn_dong_hyuk:0 "안동혁"
+ KOR_hong_sa_ik:0 "홍사익"
+ KOR_ahn_chang_ho:0 "안창호"
+ KOR_lyuh_woon_hyung:0 "여운형"
+ 
+ ### 이론가 ###
+ KOR_ji_chong:0 "지청천"
+ KOR_shin_sung_mo:0 "신성모"
+ KOR_no_baeg_lin:0 "노백린"
+ KOR_lee_tae_gyu:0 "이태규"
+ KOR_do_sang_log:0 "도상록"
+ 
+ ### 육군 참모총장 ###
+ KOR_chong:0 "지청천"
+ KOR_left_jin:0 "김좌진"
+ KOR_lee_beom_seok:0 "이범석"
+ KOR_suk_one:0 "김석원"
+ 
+ ### 해군 참모총장 ###
+ KOR_sin_sun_sung:0 "신순성"
+ 
+ ### 공군 참모총장 ###
+ KOR_no_baek_rin:0 "노백린"
+ 
+ ### 군 고위 지휘관 ###
+ KOR_kim_won_bong:0 "김원봉"
+ KOR_choe_yong_duk:0 "최용덕"
+ KOR_son_won_il:0 "손원일"
+ KOR_choi_sung_hak:0 "최성학"
+ KOR_yu_dong_yeol:0 "유동열"
+ KOR_kim_kyung_cheon:0 "김경천"
+ KOR_hong_sa_ik_2:0 "홍사익"
+ KOR_kim_hong_il:0 "김홍일"
+ 

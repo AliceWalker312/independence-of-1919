@@ -1,0 +1,994 @@
+focus_tree = {
+	id = social_liberal_korea
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UKK
+		}
+	}
+	default = no
+	focus = {
+		id = UKK_reform_nation
+		icon = GFX_goal_unknown
+		cost = 5.00
+		completion_reward = {
+			add_political_power = 100
+		}
+		x = 18
+		y = 0
+
+
+	}
+	focus = {
+		id = UKK_annex_comme
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = UKK_reform_nation
+		}
+		completion_reward = {
+			set_party_name = {
+				ideology = democratic
+				long_name = KOR_social_worker_party
+				name = KOR_social_workers_party
+			}
+		}
+		x = 18
+		y = 1
+
+	}
+	focus = {
+		id = UKK_monarchy
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_annex_comme
+		}
+		available = {
+			KOR_congress_low_support_trigger = yes
+		}
+		completion_reward = {
+			add_stability = 0.1
+			KOR_congress_small_opposition = yes
+		}
+		x = 12
+		y = 2
+
+	}
+	focus = {
+		id = UKK_rewrite_law
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_monarchy
+		}
+		completion_reward = {
+			add_ideas = KOR_rewriting_law
+		}
+		x = 11
+		y = 3
+
+	}
+	focus = {
+		id = UKK_king_no_power
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_rewrite_law
+		}
+		completion_reward = {
+			add_stability = 0.01
+		}
+		x = 10
+		y = 4
+
+	}
+	focus = {
+		id = UKK_allow_imperial_allowance
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_rewrite_law
+		}
+		completion_reward = {
+			add_political_power = 50
+			KOR_congress_small_opposition = yes
+		}
+		x = 12
+		y = 4
+
+	}
+	focus = {
+		id = UKK_allie_with_junta
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_annex_comme
+		}
+		available = {
+			KOR_congress_low_support_trigger = yes
+		}
+		completion_reward = {
+			KOR_congress_small_support = yes
+		}
+		x = 24
+		y = 2
+
+	}
+	focus = {
+		id = UKK_military_reform
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_allie_with_junta
+		}
+		prerequisite = {
+			focus = UKK_monarchy
+		}
+		available = {
+			KOR_congress_low_support_trigger = yes
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			KOR_congress_small_opposition = yes
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = UKK_reform_infantry
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_military_reform
+		}
+		completion_reward = {
+			army_experience = 25
+		}
+		x = 15
+		y = 4
+
+	}
+	focus = {
+		id = UKK_focus_armor
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_reform_infantry
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = UKK_reform_royal_navy
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_military_reform
+		}
+		completion_reward = {
+			navy_experience = 25
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = UKK_focus_battleship
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_reform_royal_navy
+		}
+		completion_reward = {
+			navy_experience = 5
+			809 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes	
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = UKK_focus_aircraft_carrior
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_reform_royal_navy
+		}		
+		completion_reward = {
+			navy_experience = 5
+			808 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes	
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = cv_tech
+			}
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = UKK_focus_fire
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_reform_infantry
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_equipment_effort
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+		x = 15
+		y = 5
+
+	}
+	focus = {
+		id = UKK_reform_royal_air_force
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_military_reform
+		}
+		completion_reward = {
+			air_experience = 25
+			814 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes	
+				}
+			}
+			527 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes	
+				}
+			}
+            810 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes	
+				}
+			}
+			811 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes	
+				}
+			}
+		}
+		x = 21
+		y = 4
+
+	}
+	focus = {
+		id = UKK_bomber_focus
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_reform_royal_air_force
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
+		}
+		x = 21
+		y = 5
+
+	}
+	focus = {
+		id = UKK_air_force_school
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_reform_royal_air_force
+		}
+		completion_reward = {
+			air_experience = 25
+		}
+		x = 23
+		y = 5
+
+	}
+	focus = {
+		id = UKK_modern_military
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_air_force_school
+		}
+		prerequisite = {
+			focus = UKK_bomber_focus
+		}
+		prerequisite = {
+			focus = UKK_focus_aircraft_carrior
+		}
+		prerequisite = {
+			focus = UKK_focus_battleship
+		}
+		prerequisite = {
+			focus = UKK_focus_fire
+		}
+		prerequisite = {
+			focus = UKK_focus_armor
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+		}
+		x = 18
+		y = 6
+
+	}
+	focus = {
+		id = UKK_give_seat_lee
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_allie_with_junta
+		}
+		available = {
+			KOR_congress_medium_support_trigger = yes
+		}
+		completion_reward = {
+			add_ideas = KOR_lee_minster_of_deffence
+		}
+		x = 25
+		y = 3
+
+	}
+	focus = {
+		id = UKK_serve_to_king
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_give_seat_lee
+		}
+		completion_reward = {
+			add_manpower = 1000
+		}
+		x = 24
+		y = 4
+
+	}
+	focus = {
+		id = UKK_reform_royal_guards
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_give_seat_lee
+		}
+		completion_reward = {
+			525 = {
+					create_unit = {
+						division = "name = \"연합왕국 근위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"연합왕국 근위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"연합왕국 근위대\" division_template = \"시위대\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+				}
+		}
+		x = 26
+		y = 4
+
+	}
+	focus = {
+		id = UKK_annex_to_infantry
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_reform_royal_guards
+		}
+		prerequisite = {
+			focus = UKK_serve_to_king
+		}
+		available = {
+			KOR_congress_medium_support_trigger = yes
+		}
+		completion_reward = {
+			KOR_congress_medium_opposition = yes
+			add_manpower = 1000
+		}
+		x = 25
+		y = 5
+
+	}
+	focus = {
+		id = UKK_use_junta_resourse
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_annex_to_infantry
+		}
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 10000
+				producer = KOR
+			}
+		}
+		x = 25
+		y = 6
+
+	}
+	focus = {
+		id = UKK_korean_waffen_ss
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_use_junta_resourse
+		}
+		completion_reward = {
+			KOR_congress_medium_opposition = yes
+			add_manpower = 1000
+			525 = {
+					create_unit = {
+						division = "name = \"연합왕국 친위대\" division_template = \"시위대\" start_experience_factor = 1 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"연합왕국 친위대\" division_template = \"시위대\" start_experience_factor = 1 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+			}
+		}
+		x = 22
+		y = 7
+
+	}
+	focus = {
+		id = UKK_stop_killing_comme
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_use_junta_resourse
+		}
+		completion_reward = {
+			KOR_congress_medium_support = yes
+		}
+		x = 24
+		y = 7
+
+	}
+	focus = {
+		id = UKK_fascism_ok
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_use_junta_resourse
+		}
+		completion_reward = {
+			add_ideas = extensive_conscription
+		}
+		x = 28
+		y = 7
+
+	}
+	focus = {
+		id = UKK_no_pol_junta
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_use_junta_resourse
+		}
+		completion_reward = {
+			KOR_congress_medium_opposition = yes
+		}
+		x = 26
+		y = 7
+
+	}
+	focus = {
+		id = UKK_annex_junta
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_fascism_ok
+		}
+		prerequisite = {
+			focus = UKK_no_pol_junta
+		}
+		prerequisite = {
+			focus = UKK_stop_killing_comme
+		}
+		prerequisite = {
+			focus = UKK_korean_waffen_ss
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
+		}
+		x = 25
+		y = 8
+
+	}
+	focus = {
+		id = UKK_dont_touch_na
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_allow_imperial_allowance
+		}
+		prerequisite = {
+			focus = UKK_king_no_power
+		}
+		completion_reward = {
+			remove_ideas = KOR_fucking
+			KOR_congress_small_support = yes
+		}
+		x = 11
+		y = 5
+
+	}
+	focus = {
+		id = UKK_economy_fix
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_dont_touch_na
+		}
+		available = {
+			KOR_congress_medium_support_trigger = yes
+		}
+		completion_reward = {
+			KOR_congress_medium_support = yes
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = UKK_american_aid
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_economy_fix
+		}
+		available = {
+			KOR_congress_medium_support_trigger = yes
+		}
+		completion_reward = {
+			set_fuel_ratio = 0.50
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = UKK_make_highway
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_economy_fix
+		}
+		completion_reward = {
+			525 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes	
+				}
+			}
+			808 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes	
+				}
+			}
+			807 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes	
+				}
+			}
+			816 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes	
+				}
+			}
+			527 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes	
+				}
+			}
+			812 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes	
+				}
+			}
+		}
+		x = 10
+		y = 7
+
+	}
+	focus = {
+		id = UKK_focus_export
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_economy_fix
+		}
+		available = {
+			KOR_congress_medium_support_trigger = yes
+		}
+		completion_reward = {
+			add_ideas = export_focus
+		}
+		x = 12
+		y = 7
+
+	}
+	focus = {
+		id = UKK_money_rev
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_economy_fix
+		}
+		completion_reward = {
+			add_stability = 0.1
+			KOR_congress_small_support = yes
+		}
+		x = 14
+		y = 7
+
+	}
+	focus = {
+		id = UKK_economy_fixed
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_money_rev
+		}
+		prerequisite = {
+			focus = UKK_focus_export
+		}
+		prerequisite = {
+			focus = UKK_make_highway
+		}
+		prerequisite = {
+			focus = UKK_american_aid
+		}
+		completion_reward = {
+			remove_ideas = KOR_kor_fuck_cro
+			KOR_congress_large_support = yes
+		}
+		x = 11
+		y = 8
+
+	}
+	focus = {
+		id = UKK_start_intervention
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_annex_junta
+		}
+		prerequisite = {
+			focus = UKK_modern_military
+		}
+		prerequisite = {
+			focus = UKK_economy_fixed
+		}
+		available = {
+			KOR_congress_high_support_trigger =yes
+		}
+		completion_reward = {
+			add_war_support = 0.2
+		}
+		x = 18
+		y = 9
+
+	}
+	focus = {
+		id = UKK_two_kings_meet
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_start_intervention
+		}
+		completion_reward = {
+			country_event = korea.9
+			diplomatic_relation = {
+				country = ENG
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = UKK_france_friend
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_start_intervention
+		}
+		completion_reward = {
+			diplomatic_relation = {
+				country = FRA
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
+		x = 19
+		y = 10
+
+	}
+	focus = {
+		id = UKK_london_royal_meet
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_two_kings_meet
+		}
+		prerequisite = {
+			focus = UKK_france_friend
+		}
+		x = 11
+		y = 11
+
+	}
+	focus = {
+		id = UKK_keep_korea_america_alliance
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_france_friend
+		}
+		prerequisite = {
+			focus = UKK_two_kings_meet
+		}
+		x = 18
+		y = 11
+
+	}
+	focus = {
+		id = UKK_asia_intervention
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_france_friend
+		}
+		prerequisite = {
+			focus = UKK_two_kings_meet
+		}
+		x = 25
+		y = 11
+
+	}
+	focus = {
+		id = UKK_war_with_japan
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_asia_intervention
+		}
+		x = 24
+		y = 12
+
+	}
+	focus = {
+		id = UKK_war_with_china
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_asia_intervention
+		}
+		x = 26
+		y = 12
+
+	}
+	focus = {
+		id = UKK_allie_or_not_ger
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_london_royal_meet
+		}
+		x = 10
+		y = 12
+
+	}
+	focus = {
+		id = UKK_for_demo
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_london_royal_meet
+		}
+		x = 12
+		y = 12
+
+	}
+	focus = {
+		id = UKK_second_stressa_meets
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_for_demo
+		}
+		prerequisite = {
+			focus = UKK_allie_or_not_ger
+		}
+		x = 11
+		y = 13
+
+	}
+	focus = {
+		id = UKK_ice_ger
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_second_stressa_meets
+		}
+		x = 11
+		y = 14
+
+	}
+	focus = {
+		id = UKK_for_peace_aisa
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_war_with_china
+		}
+		prerequisite = {
+			focus = UKK_war_with_japan
+		}
+		x = 25
+		y = 13
+
+	}
+	focus = {
+		id = UKK_vladivostok_give
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_for_peace_aisa
+		}
+		x = 25
+		y = 14
+
+	}
+	focus = {
+		id = UKK_protect_sa
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_keep_korea_america_alliance
+		}
+		mutually_exclusive = {
+			focus = UKK_split_sa
+		}
+		x = 17
+		y = 12
+
+	}
+	focus = {
+		id = UKK_split_sa
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_keep_korea_america_alliance
+		}
+		mutually_exclusive = {
+			focus = UKK_protect_sa
+		}
+		x = 19
+		y = 12
+
+	}
+	focus = {
+		id = UKK_pacific_island_demand
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_split_sa
+			focus = UKK_protect_sa
+		}
+		x = 18
+		y = 13
+
+	}
+	focus = {
+		id = UKK_peace_pacific
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_pacific_island_demand
+		}
+		x = 18
+		y = 14
+
+	}
+	focus = {
+		id = UKK_world_peace
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = UKK_vladivostok_give
+		}
+		prerequisite = {
+			focus = UKK_peace_pacific
+		}
+		prerequisite = {
+			focus = UKK_ice_ger
+		}
+		x = 18
+		y = 15
+
+	}
+}

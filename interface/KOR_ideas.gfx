@@ -1,0 +1,42 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_idea_KOR_docrip"
+		texturefile = "gfx/interface/ideas/KOR/idea_KOR_docrip.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KOR_chong"
+		texturefile = "gfx/interface/ideas/KOR/idea_chong1000.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KOR_left_jin"
+		texturefile = "gfx/interface/ideas/KOR/idea_left_jin.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_KOR_suk_one"
+		texturefile = "gfx/interface/ideas/KOR/idea_suk_one.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_KOR_king_yi_un"
+		texturefile = "gfx/interface/ideas/KOR/advisor_yi_un.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_KOR_dong_geyng"
+		texturefile = "gfx/interface/ideas/KOR/idea_KOR_dong_geyng.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_Hwan-guk"
+		texturefile = "gfx/interface/ideas/KOR/idea_Hwan-guk.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_advisor_beom_suk"
+		texturefile = "gfx/interface/ideas/KOR/advisor_beom_suk.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_joungchuwon"
+		texturefile = "gfx/interface/ideas/KOR/idea_KOR_empire_royal_family.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_KOR_lee_beom_seok"
+		texturefile = "gfx/interface/ideas/idea_KOR_lee_beom_seok.dds"
+	}
+}

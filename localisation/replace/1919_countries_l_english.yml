@@ -1,0 +1,76 @@
+﻿l_english:
+ KOR_fascism:0 "대한제국"
+ KOR_fascism_DEF:0 "대한제국"
+ KOR_democratic:0 "대한민국"
+ KOR_democratic_DEF:0 "대한민국"
+ KOR_communism:0 "대한민국"
+ KOR_communism_DEF:0 "대한민국"
+ KOR_neutrality:0 "왕실 임시 위원회"
+ KOR_neutrality_DEF:0 "왕실 임시 위원회"
+ KOR_fascism_ADJ:0 "한국"
+ KOR_democratic_ADJ:0 "한국"
+ KOR_communism_ADJ:0 "대조선국"
+ KOR_neutrality_ADJ:0 "대조선국"
+ KOR:0 "한국"
+ KOR_DEF:0 "한국"
+ KOR_ADJ:0 "한국"
+ ROK_fascism:0 "대한제국"
+ ROK_fascism_DEF:0 "대한제국"
+ ROK_democratic:0 "입헌파 한국"
+ ROK_democratic_DEF:0 "입헌파 한국"
+ ROK_communism:0 "조선민주주의인민공화국"
+ ROK_communism_DEF:0 "조선민주주의인민공화국"
+ ROK_neutrality:0 "왕실 임시 위원회"
+ ROK_neutrality_DEF:0 "왕실 임시 위원회"
+ ROK_fascism_ADJ:0 "한국"
+ ROK_democratic_ADJ:0 "한국"
+ ROK_communism_ADJ:0 "조선"
+ ROK_neutrality_ADJ:0 "한국"
+ ROK:0 "한국"
+ ROK_DEF:0 "한국"
+ ROK_ADJ:0 "한국"
+ PRK_fascism:0 "대한제국"
+ PRK_fascism_DEF:0 "대한제국"
+ PRK_democratic:0 "대한민국"
+ PRK_democratic_DEF:0 "대한민국"
+ PRK_communism:0 "조선인민해방전선"
+ PRK_communism_DEF:0 "조선인민해방전선"
+ PRK_neutrality:0 "대한제국"
+ PRK_neutrality_DEF:0 "대한제국"
+ PRK_fascism_ADJ:0 "한국"
+ PRK_democratic_ADJ:0 "한국"
+ PRK_communism_ADJ:0 "조선"
+ PRK_neutrality_ADJ:0 "한국"
+ PRK:0 "한국"
+ PRK_DEF:0 "한국"
+ PRK_ADJ:0 "한국"
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+##########코스메틱 태그##########
+KOR_provisional_kingdom_neutrality:0 "왕실 임시 위원회"
+KOR_provisional_kingdom_neutrality_DEF:0 "왕실 임시 위원회"
+KOR_provisional_kingdom_neutrality_ADJ:0 "왕실 임시 위원회"
+KOR_kingdom_of_chosen:0 "대 조선국"
+KOR_kingdom_of_chosen_ADJ:0 "대 조선국"
+KOR_kingdom_of_chosen_DEF:0 "조선" 
+KOR_united_kingdom_of_korea_democratic:0 "대한 연합왕국"
+KOR_united_kingdom_of_korea_DEF:0 "대한 연합왕국"
+KOR_united_kingdom_of_korea_ADJ:0 "한국"
+KOR_EMPIRE_neutrality:0 "대한제국"
+KOR_EMPIRE_neutrality_DEF:0 "대한제국"
+KOR_EMPIRE_neutrality_ADJ:0 "대한제국"
+
+
+
+
+####집권 정당####
+KOR_kings_party:0 "대조선 왕실"
+KOR_king_party:0 "대조선 왕실"

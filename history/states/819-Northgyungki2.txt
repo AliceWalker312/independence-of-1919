@@ -1,0 +1,18 @@
+state={
+	id=819
+	name="경기 북부"
+	provinces={
+		13248 
+	}
+	history={
+		owner = KOR
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = KOR
+		add_core_of = KPA
+	}
+	manpower=32400
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

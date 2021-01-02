@@ -1,0 +1,84 @@
+ideas = {
+	country = {
+
+		EOK_secret_police1 = {
+			picture = the_long_lance
+			modifier = {
+				encryption_factor = 0.1
+                decryption_factor = 0.1
+                foreign_subversive_activites = -0.1
+                operative_slot = 1
+				communism_drift = -0.05
+				democratic_drift = -0.05
+				custom_modifier_tooltip = EOK_secret_police_tt
+			}
+		}
+		
+		EOK_prime_minister_lee = {
+			picture = advisor_beom_suk
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		EOK_royal_laws = {
+			picture = can_defence_of_canada_regulations_communism
+			modifier = {
+				war_support_factor = +0.05
+			}
+		}
+		EOK_secret_police2 = {
+			picture = the_long_lance
+			modifier = {				
+				encryption_factor = 0.1
+                decryption_factor = 0.1
+                foreign_subversive_activites = -0.1
+                operative_slot = 1
+				communism_drift = -0.05
+				democratic_drift = -0.05
+			}
+		}
+		EOK_secret_police3 = {
+			picture = the_long_lance
+			modifier = {				
+				encryption_factor = 0.2
+                decryption_factor = 0.2
+                foreign_subversive_activites = -0.2
+                operative_slot = 1
+				communism_drift = -0.05
+				democratic_drift = -0.05
+			}
+		}
+		EOK_for_the_king = {
+			picture = HUN_hungarian_monarchy_fascism
+			modifier = {				
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				
+			}
+		}
+		EOK_joungchuwon_na = {
+			picture = joungchuwon
+			modifier = {				
+				stability_factor = -0.05
+				political_power_gain = -0.10
+				
+			}
+		}
+		EOK_joungchuwon_na_2 = {
+			picture = joungchuwon
+			modifier = {				
+				stability_factor = -0.02
+				political_power_gain = -0.05
+				
+			}
+		}
+		EOK_joungchuwon_na_3 = {
+			picture = joungchuwon
+			modifier = {				
+				stability_factor = 0.05
+				political_power_gain = 0.10
+				
+			}
+		}
+	}
+}

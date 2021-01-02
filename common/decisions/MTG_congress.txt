@@ -1,0 +1,82 @@
+KOR_congress = {
+	USA_small_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { senate_support < senate_total }
+				check_variable = { representatives_support < house_total }
+			}
+			not = {
+				has_decision = USA_medium_lobby_effort
+			}
+			OR = {
+				political_power_daily > 2.5
+				has_political_power > 10
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		modifier = {
+			political_power_gain = -0.3
+		}
+		days_remove = 10
+		remove_effect = {
+			KOR_congress_small_support = yes
+		}
+	}
+	USA_medium_lobby_effort = {
+		icon = generic_political_discourse
+		available = {
+			OR = {
+				check_variable = { senate_support < senate_total }
+				check_variable = { house_support < house_total }
+			}
+			not = {
+				has_decision = USA_small_lobby_effort
+			}
+			OR = {
+				political_power_daily > 2.75
+				has_political_power > 35
+			}
+		}
+		cost = 0
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				congress_medium_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_low_support_trigger = yes
+				factor = 0.5
+			}
+			modifier = {
+				congress_high_support_trigger = yes
+				factor = 0
+			}
+		}
+		days_remove = 45
+		modifier = {
+			political_power_gain = -0.75
+		}
+		remove_effect = {
+				KOR_congress_medium_support = yes
+
+		}
+	}
+
+}

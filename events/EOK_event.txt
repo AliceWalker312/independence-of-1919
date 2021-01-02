@@ -1,0 +1,80 @@
+add_namespace = EOK
+
+country_event = { #군부 합작
+	id = EOK.1
+	title = EOK.1.t
+	immediate = "[GetDateText]: [Root.GetName]: event EOK.1"}
+	desc = EOK.1.d
+	picture =#
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = EOK.1.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+country_event = { #내전 승리
+	id = EOK.2
+	title = EOK.2.t
+	immediate = "[GetDateText]: [Root.GetName]: event EOK.2"}
+	desc = EOK.2.d
+	picture =#
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = EOK.2.a
+		ai_chance = { factor = 100 }
+	}
+}
+
+
+country_event = { #민주주의자 운명
+	id = EOK.3
+	title = EOK.3.t
+	immediate = "[GetDateText]: [Root.GetName]: event EOK.3"}
+	desc = EOK.3.d
+	picture = GFX_report_event_worker_protests
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = EOK.3.a
+		ai_chance = { factor = 100 }
+		complete_national_focus = EOK_deal_demo
+		add_stability = 0.05
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.10
+		}
+	}
+	option = {
+		name = EOK.3.b
+		ai_chance = { factor = 100 }
+		complete_national_focus = EOK_kill_demo
+		add_stability = -0.10
+	}
+}
+
+country_event = { #민주주의자 운명
+	id = EOK.4
+	title = EOK.4.t
+	immediate = "[GetDateText]: [Root.GetName]: event EOK.4"}
+	desc = EOK.4.d
+	picture = GFX_report_event_worker_protests
+	fire_only_once = yes
+	is_triggered_only = yes	
+	
+	option = {
+		name = EOK.4.a
+		ai_chance = { factor = 100 }
+		complete_national_focus = EOK_discharge_of_conscripts
+	}
+	option = {
+		name = EOK.4.b
+		ai_chance = { factor = 100 }
+		complete_national_focus = EOK_annex_conscripts
+	}
+}

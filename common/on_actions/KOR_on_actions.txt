@@ -1,0 +1,10 @@
+on_actions = {
+	on_startup = {
+		effect = {
+	KOR = {
+		set_country_flag = TNO_opening_screen_show
+		set_country_flag = OPEN_view_country_info
+			}
+		}
+	}
+}
