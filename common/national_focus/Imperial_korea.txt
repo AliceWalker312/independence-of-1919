@@ -248,6 +248,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			set_cosmetic_tag = KOR_kingdom_of_chosen
+			set_party_name = {
+				ideology = neutrality
+				long_name = KOR_king_party
+				name = KOR_kings_party
+				}
 			create_country_leader = {
 	        name = "국왕 이은"
 	        desc = ""
