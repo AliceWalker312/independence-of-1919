@@ -797,6 +797,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UKK_france_friend
 		}
+		completion_reward = {
+			country_event = korea.10
+		}
 		x = 11
 		y = 11
 
@@ -810,6 +813,20 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = UKK_two_kings_meet
+		}
+		completion_reward = {
+				diplomatic_relation = {
+					country = USA
+					relation = guarantee
+					active = yes
+				}
+			USA = {
+				diplomatic_relation = {
+					country = KOR
+					relation = guarantee
+					active = yes
+				}	
+			}
 		}
 		x = 18
 		y = 11
@@ -825,6 +842,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UKK_two_kings_meet
 		}
+		completion_reward = {
+			add_war_support = 0.10
+		}
 		x = 25
 		y = 11
 
@@ -835,6 +855,12 @@ focus_tree = {
 		cost = 4.00
 		prerequisite = {
 			focus = UKK_asia_intervention
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAP
+			}
 		}
 		x = 24
 		y = 12
@@ -847,6 +873,17 @@ focus_tree = {
 		prerequisite = {
 			focus = UKK_asia_intervention
 		}
+		available = {
+			NOT = {
+				is_in_faction_with = CHI
+			}
+		}
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHI
+			}
+		}
 		x = 26
 		y = 12
 
@@ -858,6 +895,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UKK_london_royal_meet
 		}
+		completion_reward = {
+			country_event = korea.11
+		}
 		x = 10
 		y = 12
 
@@ -868,6 +908,12 @@ focus_tree = {
 		cost = 4.00
 		prerequisite = {
 			focus = UKK_london_royal_meet
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.2
+			}
 		}
 		x = 12
 		y = 12
@@ -883,6 +929,9 @@ focus_tree = {
 		prerequisite = {
 			focus = UKK_allie_or_not_ger
 		}
+		completion_reward = {
+			country_event = korea.12
+		}
 		x = 11
 		y = 13
 
@@ -894,6 +943,11 @@ focus_tree = {
 		prerequisite = {
 			focus = UKK_second_stressa_meets
 		}
+		completion_reward = {
+			GER = {
+				add_war_support = -0.10
+			}
+		}
 		x = 11
 		y = 14
 
@@ -904,9 +958,10 @@ focus_tree = {
 		cost = 4.00
 		prerequisite = {
 			focus = UKK_war_with_china
-		}
-		prerequisite = {
 			focus = UKK_war_with_japan
+		}
+		completion_reward = {
+			add_stability = 0.10
 		}
 		x = 25
 		y = 13
@@ -918,6 +973,29 @@ focus_tree = {
 		cost = 4.00
 		prerequisite = {
 			focus = UKK_for_peace_aisa
+		}
+		available = {
+			408 = {
+				is_owned_by = SOV
+			}
+			409 = {
+				is_owned_by = SOV
+			}
+		}
+		
+		completion_reward = {
+			408 = {
+				set_state_name = "연해주"
+				add_core_of = KOR
+			}
+			409 = {
+				set_state_name = "북부 연해주"
+				add_core_of = KOR
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = SOV
+			}
 		}
 		x = 25
 		y = 14
@@ -933,6 +1011,31 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UKK_split_sa
 		}
+		completion_reward = {
+			effect_tooltip = {
+				give_guarantee = BRA
+				give_guarantee = ARG
+				give_guarantee = URG
+				give_guarantee = PRA
+				give_guarantee = BOL
+				give_guarantee = CHL
+				give_guarantee = PRU
+				give_guarantee = ECU
+				give_guarantee = VEN
+				give_guarantee = COL
+				give_guarantee = PAN
+				give_guarantee = COS
+				give_guarantee = NIC
+				give_guarantee = HON
+				give_guarantee = ELS
+				give_guarantee = GUA
+				give_guarantee = MEX
+				give_guarantee = CUB
+				give_guarantee = HAI
+				give_guarantee = DOM
+			}
+			
+		}
 		x = 17
 		y = 12
 
@@ -947,6 +1050,88 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = UKK_protect_sa
 		}
+		completion_reward = {
+		USA = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BRA
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ARG
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = URG
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PRA
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = BOL
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = VEN
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = NIC
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PAN
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = COS
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HON
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ELS
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = GUA
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MEX
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CUB
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = HAI
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = DOM
+			}
+		}
+		KOR = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHL
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = PRU
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ECU
+			}
+			}
+		}
 		x = 19
 		y = 12
 
@@ -959,6 +1144,23 @@ focus_tree = {
 			focus = UKK_split_sa
 			focus = UKK_protect_sa
 		}
+		completion_reward = {
+			KOR = {
+				transfer_state = 642
+				transfer_state = 727
+				transfer_state = 630
+				transfer_state = 629
+				transfer_state = 631
+				transfer_state = 632
+				transfer_state = 633
+				transfer_state = 684
+				transfer_state = 645
+				transfer_state = 648
+				transfer_state = 646
+				transfer_state = 638
+				transfer_state = 647
+			}
+		}
 		x = 18
 		y = 13
 
@@ -969,6 +1171,9 @@ focus_tree = {
 		cost = 4.00
 		prerequisite = {
 			focus = UKK_pacific_island_demand
+		}
+		completion_reward = {
+			add_stability = 0.10
 		}
 		x = 18
 		y = 14
@@ -986,6 +1191,12 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = UKK_ice_ger
+		}
+		completion_reward = {
+			custom_effect_tooltip = theres_no_war
+			hidden_effect = {
+				add_stability = 1.0
+			}
 		}
 		x = 18
 		y = 15
