@@ -11,6 +11,6 @@ tags={
 dependencies={
 	"Korean Language (Europa)"
 }
-name="1919년의 독립"
+name="Independence in 1919"
 supported_version="1.10.3"
 remote_file_id="2313066874"
