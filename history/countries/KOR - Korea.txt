@@ -5,9 +5,9 @@ oob = "KOR_1936"
 
 
 
-set_variable = { var = senate_support value = 20 }
+set_variable = { var = senate_support value = 32 }
 set_variable = { var = senate_total value = 96 }
-set_variable = { var = house_support value = 100 }
+set_variable = { var = house_support value = 156 }
 set_variable = { var = house_total value = 435 }
 set_variable = { var = quorum_low value = 39 }
 set_variable = { var = quorum_medium value = 49 }

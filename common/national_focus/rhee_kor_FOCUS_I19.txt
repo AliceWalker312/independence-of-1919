@@ -1,0 +1,1014 @@
+focus_tree = {
+	id = I19_rhee_kor_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = KOR
+		}
+	}
+	default = no
+	focus = {
+		id = Rhee_kor_war
+		text = rhee_kor_war
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 4.00
+		x = 18
+		y = 0
+
+	}
+	focus = {
+		id = Rhee_long_sword_night
+		text = Rhee_long_sword_night
+		icon = GFX_goal_unknown
+		cost = 6.00
+		x = 37
+		y = 3
+
+	}
+	focus = {
+		id = Rhee_kor_wehe
+		text = Rhee_kor_wehe
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 18
+		y = 17
+
+	}
+	focus = {
+		id = KOR_kill_communism
+		text = KOR_kill_communism
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		cost = 2.00
+		prerequisite = {
+			focus = Rhee_kor_war
+		}
+		mutually_exclusive = {
+			focus = Rhee_king_fuck
+		}
+		x = 16
+		y = 1
+
+	}
+	focus = {
+		id = Rhee_king_fuck
+		icon = GFX_focus_rom_handle_king
+		cost = 2.00
+		prerequisite = {
+			focus = Rhee_kor_war
+		}
+		mutually_exclusive = {
+			focus = KOR_kill_communism
+		}
+		x = 20
+		y = 1
+
+	}
+	focus = {
+		id = Rhee_peninsula_Advance
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = KOR_kill_communism
+			focus = Rhee_king_fuck
+		}
+		x = 18
+		y = 2
+
+	}
+	focus = {
+		id = Rhee_revolution_2st
+		text = Rhee_revolution_2st
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_peninsula_Advance
+		}
+		x = 18
+		y = 3
+
+	}
+	focus = {
+		id = Rhee_the_United_States_of_America
+		text = Rhee_the_United_States_of_America
+		icon = GFX_focus_chi_mission_to_the_us
+		cost = 2.00
+		prerequisite = {
+			focus = Rhee_revolution_2st
+		}
+		x = 13
+		y = 4
+
+	}
+	focus = {
+		id = Rhee_constitutional_amendment
+		text = Rhee_constitutional_amendment
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_revolution_2st
+		}
+		x = 18
+		y = 4
+
+	}
+	focus = {
+		id = Rhee_war_free
+		text = Rhee_war_free
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = Rhee_constitutional_amendment
+		}
+		x = 17
+		y = 5
+
+	}
+	focus = {
+		id = Rhee_Rebellion_limit_free
+		text = Rhee_Rebellion_limit_free
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_war_free
+		}
+		x = 17
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_army_wages
+		text = Rhee_army_wages
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = Rhee_constitutional_amendment
+		}
+		x = 19
+		y = 5
+
+	}
+	focus = {
+		id = Rhee_korea_union
+		text = Rhee_korea_union
+		icon = GFX_goal_unknown
+		cost = 7.00
+		prerequisite = {
+			focus = Rhee_army_wages
+		}
+		x = 19
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_Necessarily_win
+		text = Rhee_Necessarily_win
+		icon = GFX_goal_unknown
+		cost = 2.00
+		prerequisite = {
+			focus = Rhee_Rebellion_limit_free
+		}
+		prerequisite = {
+			focus = Rhee_korea_union
+		}
+		x = 18
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_korea_congress
+		text = Rhee_korea_congress
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = Rhee_revolution_2st
+		}
+		x = 24
+		y = 4
+
+	}
+	focus = {
+		id = Rhee_Liberal_Party
+		text = Rhee_Liberal_Party
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_korea_congress
+		}
+		x = 24
+		y = 5
+
+	}
+	focus = {
+		id = Rhee_japen_Cooperation_kill
+		text = Rhee_japen_Cooperation_kill
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = Rhee_Liberal_Party
+		}
+		x = 21
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_detong_r
+		text = Rhee_detong_r
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_Liberal_Party
+		}
+		mutually_exclusive = {
+			focus = Rhee_kor_ip_hun
+		}
+		x = 23
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_kor_ip_hun
+		text = Rhee_kor_ip_hun
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_Liberal_Party
+		}
+		mutually_exclusive = {
+			focus = Rhee_detong_r
+		}
+		x = 25
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_revolution_farming_land
+		text = Rhee_revolution_farming_land
+		icon = GFX_focus_chi_examination_yuan
+		cost = 2.00
+		prerequisite = {
+			focus = Rhee_Liberal_Party
+		}
+		x = 27
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_Education_revolution
+		text = Rhee_Education_revolution
+		icon = GFX_goal_generic_national_unity
+		cost = 4.00
+		prerequisite = {
+			focus = Rhee_revolution_farming_land
+		}
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_independence_army
+		text = Rhee_independence_army
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_long_sword_night
+		}
+		x = 34
+		y = 4
+
+	}
+	focus = {
+		id = Rhee_independence_police
+		text = Rhee_independence_police
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_independence_army
+		}
+		x = 34
+		y = 5
+
+	}
+	focus = {
+		id = Rhee_reft_all_kill
+		text = Rhee_reft_all_kill
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_independence_police
+		}
+		x = 33
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_european_waching
+		text = Rhee_european_waching
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_independence_police
+		}
+		x = 35
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_win_an
+		text = Rhee_win_an
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_reft_all_kill
+		}
+		prerequisite = {
+			focus = Rhee_european_waching
+		}
+		x = 34
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_america_waching
+		text = Rhee_america_waching
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_long_sword_night
+		}
+		x = 41
+		y = 4
+
+	}
+	focus = {
+		id = Rhee_jejung
+		text = Rhee_jejung
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_america_waching
+		}
+		x = 41
+		y = 5
+
+	}
+	focus = {
+		id = Rhee_go_abroad
+		text = Rhee_go_abroad
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_jejung
+		}
+		x = 39
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_deflation
+		text = Rhee_deflation
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_jejung
+		}
+		x = 43
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_yeonbang_budong
+		text = Rhee_yeonbang_budong
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_go_abroad
+		}
+		prerequisite = {
+			focus = Rhee_deflation
+		}
+		x = 41
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_moolga
+		text = Rhee_moolga
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_yeonbang_budong
+		}
+		x = 41
+		y = 8
+
+	}
+	focus = {
+		id = Rhee_america_friends
+		text = Rhee_america_friends
+		icon = GFX_focus_BUL_the_unification_of_the_balkans
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_the_United_States_of_America
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = Rhee_japen_Discrimination
+		text = Rhee_japen_Discrimination
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_america_friends
+		}
+		mutually_exclusive = {
+			focus = Rhee_japen_old
+		}
+		x = 11
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_japen_old
+		text = Rhee_japen_old
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_america_friends
+		}
+		mutually_exclusive = {
+			focus = Rhee_japen_Discrimination
+		}
+		x = 15
+		y = 6
+
+	}
+	focus = {
+		id = Rhee_knife_night_no
+		text = Rhee_knife_night_no
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = Rhee_japen_Cooperation_kill
+		}
+		x = 21
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_north_ocean_Alliance
+		text = Rhee_north_ocean_Alliance
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_japen_Discrimination
+		}
+		prerequisite = {
+			focus = Rhee_japen_old
+		}
+		x = 13
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_republic_Guard
+		text = Rhee_republic_Guard
+		icon = GFX_focus_generic_treaty
+		cost = 7.00
+		prerequisite = {
+			focus = Rhee_north_ocean_Alliance
+		}
+		prerequisite = {
+			focus = Rhee_Necessarily_win
+		}
+		prerequisite = {
+			focus = Rhee_knife_night_no
+		}
+		prerequisite = {
+			focus = Rhee_Education_revolution
+		}
+		x = 21
+		y = 8
+
+	}
+	focus = {
+		id = Rhee_loser_kill
+		text = Rhee_loser_kill
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_republic_Guard
+		}
+		x = 21
+		y = 9
+
+	}
+	focus = {
+		id = Rhee_erection_1st
+		text = Rhee_erection_1st
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_loser_kill
+		}
+		x = 31
+		y = 10
+
+	}
+	focus = {
+		id = Rhee_Provisional_government_end
+		text = Rhee_Provisional_government_end
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_loser_kill
+		}
+		x = 19
+		y = 10
+
+	}
+	focus = {
+		id = Rhee_army_down
+		text = Rhee_army_down
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_loser_kill
+		}
+		x = 24
+		y = 10
+
+	}
+	focus = {
+		id = Rhee_korea_army_create
+		text = Rhee_korea_army_create
+		icon = GFX_focus_generic_little_entente
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_army_down
+		}
+		x = 24
+		y = 11
+
+	}
+	focus = {
+		id = Rhee_daehan_manse
+		text = Rhee_daehan_manse
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_Provisional_government_end
+		}
+		prerequisite = {
+			focus = Rhee_comunism_all_kill
+		}
+		x = 18
+		y = 11
+
+	}
+	focus = {
+		id = Rhee_tank_up
+		text = Rhee_tank_up
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_korea_army_create
+		}
+		x = 23
+		y = 12
+
+	}
+	focus = {
+		id = Rhee_gun
+		text = Rhee_gun
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_korea_army_create
+		}
+		x = 25
+		y = 12
+
+	}
+	focus = {
+		id = Rhee_usa_help
+		text = Rhee_usa_help
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_tank_up
+			focus = Rhee_gun
+		}
+		mutually_exclusive = {
+			focus = Rhee_we
+		}
+		x = 23
+		y = 13
+
+	}
+	focus = {
+		id = Rhee_we
+		text = Rhee_we
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_tank_up
+			focus = Rhee_gun
+		}
+		mutually_exclusive = {
+			focus = Rhee_usa_help
+		}
+		x = 25
+		y = 13
+
+	}
+	focus = {
+		id = Rhee_military_review
+		text = Rhee_military_review
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_kor_kor_army
+		}
+		x = 24
+		y = 15
+
+	}
+	focus = {
+		id = Rhee_kor_kor_army
+		text = Rhee_kor_kor_army
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_usa_help
+		}
+		prerequisite = {
+			focus = Rhee_we
+		}
+		x = 24
+		y = 14
+
+	}
+	focus = {
+		id = Rhee_anti_ethnic_actor
+		text = Rhee_anti_ethnic_actor
+		icon = GFX_goal_unknown
+		cost = 4.00
+		prerequisite = {
+			focus = Rhee_democratic_win
+		}
+		x = 16
+		y = 13
+
+	}
+	focus = {
+		id = Rhee_communist_kill
+		text = Rhee_communist_kill
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_free_defe
+		}
+		x = 20
+		y = 13
+
+	}
+	focus = {
+		id = Rhee_democratic_win
+		text = Rhee_democratic_win
+		icon = GFX_goal_unknown
+		cost = 12.00
+		prerequisite = {
+			focus = Rhee_daehan_manse
+		}
+		x = 16
+		y = 12
+
+	}
+	focus = {
+		id = Rhee_central_government_up
+		text = Rhee_central_government_up
+		icon = GFX_focus_generic_tank_production
+		cost = 7.00
+		prerequisite = {
+			focus = Rhee_limit_fuck_you
+		}
+		x = 13
+		y = 12
+
+	}
+	focus = {
+		id = Rhee_five_flen
+		text = Rhee_five_flen
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_erection_1st
+		}
+		x = 31
+		y = 11
+
+	}
+	focus = {
+		id = Rhee_limit_fuck_you
+		text = Rhee_limit_fuck_you
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_Provisional_government_end
+		}
+		x = 13
+		y = 11
+
+	}
+	focus = {
+		id = Rhee_comunism_all_kill
+		text = Rhee_comunism_all_kill
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_loser_kill
+		}
+		x = 17
+		y = 10
+
+	}
+	focus = {
+		id = Korea_manse
+		text = Korea_manse
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_anti_ethnic_actor
+		}
+		prerequisite = {
+			focus = Rhee_communist_kill
+		}
+		x = 18
+		y = 14
+
+	}
+	focus = {
+		id = newfocus_63
+		text = newfocus_63
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_five_flen
+		}
+		mutually_exclusive = {
+			focus = newfocus_64
+		}
+		x = 33
+		y = 12
+
+	}
+	focus = {
+		id = newfocus_64
+		text = newfocus_64
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_five_flen
+		}
+		mutually_exclusive = {
+			focus = newfocus_63
+		}
+		x = 29
+		y = 12
+
+	}
+	focus = {
+		id = newfocus_65
+		text = newfocus_65
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = newfocus_63
+			focus = newfocus_64
+		}
+		x = 33
+		y = 13
+
+	}
+	focus = {
+		id = newfocus_66
+		text = newfocus_66
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = newfocus_64
+			focus = newfocus_63
+		}
+		x = 29
+		y = 13
+
+	}
+	focus = {
+		id = newfocus_67
+		text = newfocus_67
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = newfocus_66
+		}
+		x = 29
+		y = 14
+
+	}
+	focus = {
+		id = newfocus_68
+		text = newfocus_68
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = newfocus_65
+		}
+		x = 33
+		y = 14
+
+	}
+	focus = {
+		id = newfocus_69
+		text = newfocus_69
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = newfocus_67
+		}
+		prerequisite = {
+			focus = newfocus_68
+		}
+		x = 31
+		y = 15
+
+	}
+	focus = {
+		id = Rhee_a
+		text = Rhee_a
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_kor_wehe
+		}
+		mutually_exclusive = {
+			focus = Rhee_b
+		}
+		x = 16
+		y = 18
+
+	}
+	focus = {
+		id = Rhee_b
+		text = Rhee_b
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_kor_wehe
+		}
+		mutually_exclusive = {
+			focus = Rhee_a
+		}
+		x = 20
+		y = 18
+
+	}
+	focus = {
+		id = Rhee_ja
+		text = Rhee_ja
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_a
+			focus = Rhee_b
+		}
+		x = 18
+		y = 19
+
+	}
+	focus = {
+		id = Rhee_manju_yogu
+		text = Rhee_manju_yogu
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_ja
+		}
+		x = 18
+		y = 20
+
+	}
+	focus = {
+		id = Rhee_manju_saben
+		text = Rhee_manju_saben
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_manju_yogu
+		}
+		x = 18
+		y = 21
+
+	}
+	focus = {
+		id = Rhee_sov_war
+		text = Rhee_sov_war
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_ja_war
+		}
+		x = 18
+		y = 23
+
+	}
+	focus = {
+		id = Rhee_whan
+		text = Rhee_whan
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_sov_war
+		}
+		x = 16
+		y = 24
+
+	}
+	focus = {
+		id = Rhee_ja_war
+		text = Rhee_ja_war
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_manju_saben
+		}
+		x = 18
+		y = 22
+
+	}
+	focus = {
+		id = Rhee_european_war
+		text = Rhee_european_war
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_whan
+		}
+		prerequisite = {
+			focus = Rhee_daehan_emp
+		}
+		x = 18
+		y = 25
+
+	}
+	focus = {
+		id = Rhee_daehan_emp
+		text = Rhee_daehan_emp
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_sov_war
+		}
+		x = 20
+		y = 24
+
+	}
+	focus = {
+		id = Rhee_korea_empir
+		text = 영광의 공화국
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_european_war
+		}
+		x = 18
+		y = 26
+
+	}
+	focus = {
+		id = Rhee_free_defe
+		text = Rhee_free_defe
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_daehan_manse
+		}
+		x = 20
+		y = 12
+
+	}
+	focus = {
+		id = Rhee_rhee_sy_good
+		text = Rhee_rhee_sy_good
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_daehan_manse
+		}
+		x = 18
+		y = 12
+
+	}
+}
