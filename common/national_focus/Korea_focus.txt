@@ -366,7 +366,7 @@ focus_tree = {
 			custom_effect_tooltip = KOR_democratic_defence.tt
 			add_stability = 0.05
 				hidden_effect = {
-					load_focus_tree = I19_RHee_kor_focus
+					load_focus_tree = I19_rhee_kor_focus
 				}
 		}
 	}

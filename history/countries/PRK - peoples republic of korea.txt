@@ -40,3 +40,4 @@ create_country_leader = {
 		#
 	}
 }
+add_ideas = KOR_kor_fuck_cro
