@@ -13,11 +13,17 @@ focus_tree = {
 		text = rhee_kor_war
 		icon = GFX_focus_generic_the_giant_wakes
 		cost = 4.00
-		x = 18
+		x = 21
 		y = 0
-		completion_reward = {
-			add_stabilty = 0.1
-		}
+
+	}
+	focus = {
+		id = Rhee_Provisional_government_end
+		text = Rhee_Provisional_government_end
+		icon = GFX_goal_unknown
+		cost = 10.00
+		x = 21
+		y = 12
 
 	}
 	focus = {
@@ -25,8 +31,8 @@ focus_tree = {
 		text = Rhee_long_sword_night
 		icon = GFX_goal_unknown
 		cost = 6.00
-		x = 37
-		y = 3
+		x = 35
+		y = 2
 
 	}
 	focus = {
@@ -34,8 +40,8 @@ focus_tree = {
 		text = Rhee_kor_wehe
 		icon = GFX_goal_unknown
 		cost = 10.00
-		x = 18
-		y = 17
+		x = 25
+		y = 20
 
 	}
 	focus = {
@@ -49,7 +55,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = Rhee_king_fuck
 		}
-		x = 16
+		x = 19
 		y = 1
 
 	}
@@ -63,7 +69,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = KOR_kill_communism
 		}
-		x = 20
+		x = 23
 		y = 1
 
 	}
@@ -75,7 +81,7 @@ focus_tree = {
 			focus = KOR_kill_communism
 			focus = Rhee_king_fuck
 		}
-		x = 18
+		x = 21
 		y = 2
 
 	}
@@ -87,7 +93,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_peninsula_Advance
 		}
-		x = 18
+		x = 21
 		y = 3
 
 	}
@@ -99,8 +105,89 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_revolution_2st
 		}
-		x = 13
+		x = 17
 		y = 4
+
+	}
+	focus = {
+		id = Rhee_detong_r
+		text = Rhee_detong_r
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_revolution_2st
+		}
+		mutually_exclusive = {
+			focus = Rhee_kor_ip_hun
+		}
+		x = 20
+		y = 4
+
+	}
+	focus = {
+		id = Rhee_kor_ip_hun
+		text = Rhee_kor_ip_hun
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_revolution_2st
+		}
+		mutually_exclusive = {
+			focus = Rhee_detong_r
+		}
+		x = 22
+		y = 4
+
+	}
+	focus = {
+		id = Rhee_daehan_manse
+		text = Rhee_daehan_manse
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_Provisional_government_end
+		}
+		x = 21
+		y = 13
+
+	}
+	focus = {
+		id = Rhee_free_defe
+		text = Rhee_free_defe
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_daehan_manse
+		}
+		x = 23
+		y = 14
+
+	}
+	focus = {
+		id = Rhee_communist_kill
+		text = Rhee_communist_kill
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_free_defe
+		}
+		x = 23
+		y = 15
+
+	}
+	focus = {
+		id = Rhee_a
+		text = Rhee_a
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_kor_wehe
+		}
+		mutually_exclusive = {
+			focus = Rhee_b
+		}
+		x = 23
+		y = 21
 
 	}
 	focus = {
@@ -111,7 +198,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_revolution_2st
 		}
-		x = 18
+		x = 25
 		y = 4
 
 	}
@@ -123,7 +210,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_constitutional_amendment
 		}
-		x = 17
+		x = 24
 		y = 5
 
 	}
@@ -135,7 +222,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_war_free
 		}
-		x = 17
+		x = 24
 		y = 6
 
 	}
@@ -147,7 +234,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_constitutional_amendment
 		}
-		x = 19
+		x = 26
 		y = 5
 
 	}
@@ -159,7 +246,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_army_wages
 		}
-		x = 19
+		x = 26
 		y = 6
 
 	}
@@ -174,74 +261,83 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_korea_union
 		}
-		x = 18
+		x = 25
 		y = 7
 
 	}
 	focus = {
-		id = Rhee_korea_congress
-		text = Rhee_korea_congress
+		id = Rhee_comunism_all_kill
+		text = Rhee_comunism_all_kill
 		icon = GFX_goal_unknown
-		cost = 4.00
+		cost = 10.00
 		prerequisite = {
-			focus = Rhee_revolution_2st
+			focus = Rhee_korea_union
 		}
-		x = 24
+		x = 27
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_b
+		text = Rhee_b
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_kor_wehe
+		}
+		mutually_exclusive = {
+			focus = Rhee_a
+		}
+		x = 27
+		y = 21
+
+	}
+	focus = {
+		id = Rhee_independence_army
+		text = Rhee_independence_army
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_long_sword_night
+		}
+		x = 31
+		y = 3
+
+	}
+	focus = {
+		id = Rhee_independence_police
+		text = Rhee_independence_police
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_independence_army
+		}
+		x = 31
 		y = 4
 
 	}
 	focus = {
-		id = Rhee_Liberal_Party
-		text = Rhee_Liberal_Party
+		id = Rhee_reft_all_kill
+		text = Rhee_reft_all_kill
 		icon = GFX_goal_unknown
-		cost = 3.00
+		cost = 10.00
 		prerequisite = {
-			focus = Rhee_korea_congress
+			focus = Rhee_independence_police
 		}
-		x = 24
+		x = 30
 		y = 5
 
 	}
 	focus = {
-		id = Rhee_japen_Cooperation_kill
-		text = Rhee_japen_Cooperation_kill
-		icon = GFX_goal_unknown
-		cost = 4.00
-		prerequisite = {
-			focus = Rhee_Liberal_Party
-		}
-		x = 21
-		y = 6
-
-	}
-	focus = {
-		id = Rhee_detong_r
-		text = Rhee_detong_r
+		id = Rhee_european_waching
+		text = Rhee_european_waching
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = Rhee_Liberal_Party
+			focus = Rhee_independence_police
 		}
-		mutually_exclusive = {
-			focus = Rhee_kor_ip_hun
-		}
-		x = 23
-		y = 6
-
-	}
-	focus = {
-		id = Rhee_kor_ip_hun
-		text = Rhee_kor_ip_hun
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_Liberal_Party
-		}
-		mutually_exclusive = {
-			focus = Rhee_detong_r
-		}
-		x = 25
-		y = 6
+		x = 32
+		y = 5
 
 	}
 	focus = {
@@ -250,9 +346,12 @@ focus_tree = {
 		icon = GFX_focus_chi_examination_yuan
 		cost = 2.00
 		prerequisite = {
-			focus = Rhee_Liberal_Party
+			focus = Rhee_reft_all_kill
 		}
-		x = 27
+		prerequisite = {
+			focus = Rhee_european_waching
+		}
+		x = 31
 		y = 6
 
 	}
@@ -264,70 +363,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_revolution_farming_land
 		}
-		x = 27
-		y = 7
-
-	}
-	focus = {
-		id = Rhee_independence_army
-		text = Rhee_independence_army
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_long_sword_night
-		}
-		x = 34
-		y = 4
-
-	}
-	focus = {
-		id = Rhee_independence_police
-		text = Rhee_independence_police
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_independence_army
-		}
-		x = 34
-		y = 5
-
-	}
-	focus = {
-		id = Rhee_reft_all_kill
-		text = Rhee_reft_all_kill
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_independence_police
-		}
-		x = 33
-		y = 6
-
-	}
-	focus = {
-		id = Rhee_european_waching
-		text = Rhee_european_waching
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_independence_police
-		}
-		x = 35
-		y = 6
-
-	}
-	focus = {
-		id = Rhee_win_an
-		text = Rhee_win_an
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_reft_all_kill
-		}
-		prerequisite = {
-			focus = Rhee_european_waching
-		}
-		x = 34
+		x = 31
 		y = 7
 
 	}
@@ -339,8 +375,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_long_sword_night
 		}
-		x = 41
-		y = 4
+		x = 39
+		y = 3
 
 	}
 	focus = {
@@ -351,8 +387,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_america_waching
 		}
-		x = 41
-		y = 5
+		x = 39
+		y = 4
 
 	}
 	focus = {
@@ -363,8 +399,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_jejung
 		}
-		x = 39
-		y = 6
+		x = 37
+		y = 5
 
 	}
 	focus = {
@@ -375,8 +411,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_jejung
 		}
-		x = 43
-		y = 6
+		x = 41
+		y = 5
 
 	}
 	focus = {
@@ -390,8 +426,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_deflation
 		}
-		x = 41
-		y = 7
+		x = 39
+		y = 6
 
 	}
 	focus = {
@@ -402,8 +438,59 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_yeonbang_budong
 		}
-		x = 41
+		x = 39
+		y = 7
+
+	}
+	focus = {
+		id = Rhee_win_an
+		text = Rhee_win_an
+		icon = GFX_goal_unknown
+		cost = 10.00
+		prerequisite = {
+			focus = Rhee_Education_revolution
+		}
+		prerequisite = {
+			focus = Rhee_moolga
+		}
+		x = 35
 		y = 8
+
+	}
+	focus = {
+		id = Rhee_army_down
+		text = Rhee_army_down
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_win_an
+		}
+		x = 31
+		y = 9
+
+	}
+	focus = {
+		id = Rhee_erection_1st
+		text = Rhee_erection_1st
+		icon = GFX_goal_unknown
+		cost = 3.00
+		prerequisite = {
+			focus = Rhee_win_an
+		}
+		x = 39
+		y = 9
+
+	}
+	focus = {
+		id = Rhee_five_flen
+		text = Rhee_five_flen
+		icon = GFX_goal_unknown
+		cost = 5.00
+		prerequisite = {
+			focus = Rhee_erection_1st
+		}
+		x = 39
+		y = 10
 
 	}
 	focus = {
@@ -414,7 +501,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_the_United_States_of_America
 		}
-		x = 13
+		x = 17
 		y = 5
 
 	}
@@ -429,7 +516,7 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = Rhee_japen_old
 		}
-		x = 11
+		x = 15
 		y = 6
 
 	}
@@ -444,20 +531,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = Rhee_japen_Discrimination
 		}
-		x = 15
+		x = 19
 		y = 6
-
-	}
-	focus = {
-		id = Rhee_knife_night_no
-		text = Rhee_knife_night_no
-		icon = GFX_goal_unknown
-		cost = 4.00
-		prerequisite = {
-			focus = Rhee_japen_Cooperation_kill
-		}
-		x = 21
-		y = 7
 
 	}
 	focus = {
@@ -471,7 +546,7 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_japen_old
 		}
-		x = 13
+		x = 17
 		y = 7
 
 	}
@@ -485,12 +560,6 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = Rhee_Necessarily_win
-		}
-		prerequisite = {
-			focus = Rhee_knife_night_no
-		}
-		prerequisite = {
-			focus = Rhee_Education_revolution
 		}
 		x = 21
 		y = 8
@@ -509,42 +578,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = Rhee_erection_1st
-		text = Rhee_erection_1st
-		icon = GFX_goal_unknown
-		cost = 3.00
-		prerequisite = {
-			focus = Rhee_loser_kill
-		}
-		x = 31
-		y = 10
-
-	}
-	focus = {
-		id = Rhee_Provisional_government_end
-		text = Rhee_Provisional_government_end
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_loser_kill
-		}
-		x = 19
-		y = 10
-
-	}
-	focus = {
-		id = Rhee_army_down
-		text = Rhee_army_down
-		icon = GFX_goal_unknown
-		cost = 5.00
-		prerequisite = {
-			focus = Rhee_loser_kill
-		}
-		x = 24
-		y = 10
-
-	}
-	focus = {
 		id = Rhee_korea_army_create
 		text = Rhee_korea_army_create
 		icon = GFX_focus_generic_little_entente
@@ -552,23 +585,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_army_down
 		}
-		x = 24
-		y = 11
-
-	}
-	focus = {
-		id = Rhee_daehan_manse
-		text = Rhee_daehan_manse
-		icon = GFX_goal_unknown
-		cost = 5.00
-		prerequisite = {
-			focus = Rhee_Provisional_government_end
-		}
-		prerequisite = {
-			focus = Rhee_comunism_all_kill
-		}
-		x = 18
-		y = 11
+		x = 31
+		y = 10
 
 	}
 	focus = {
@@ -579,8 +597,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_korea_army_create
 		}
-		x = 23
-		y = 12
+		x = 30
+		y = 11
 
 	}
 	focus = {
@@ -591,8 +609,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_korea_army_create
 		}
-		x = 25
-		y = 12
+		x = 32
+		y = 11
 
 	}
 	focus = {
@@ -607,8 +625,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = Rhee_we
 		}
-		x = 23
-		y = 13
+		x = 30
+		y = 12
 
 	}
 	focus = {
@@ -623,8 +641,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = Rhee_usa_help
 		}
-		x = 25
-		y = 13
+		x = 32
+		y = 12
 
 	}
 	focus = {
@@ -635,8 +653,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_kor_kor_army
 		}
-		x = 24
-		y = 15
+		x = 31
+		y = 14
 
 	}
 	focus = {
@@ -650,8 +668,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_we
 		}
-		x = 24
-		y = 14
+		x = 31
+		y = 13
 
 	}
 	focus = {
@@ -662,20 +680,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_democratic_win
 		}
-		x = 16
-		y = 13
-
-	}
-	focus = {
-		id = Rhee_communist_kill
-		text = Rhee_communist_kill
-		icon = GFX_goal_unknown
-		cost = 3.00
-		prerequisite = {
-			focus = Rhee_free_defe
-		}
-		x = 20
-		y = 13
+		x = 19
+		y = 15
 
 	}
 	focus = {
@@ -686,8 +692,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_daehan_manse
 		}
-		x = 16
-		y = 12
+		x = 19
+		y = 14
 
 	}
 	focus = {
@@ -698,20 +704,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_limit_fuck_you
 		}
-		x = 13
-		y = 12
-
-	}
-	focus = {
-		id = Rhee_five_flen
-		text = Rhee_five_flen
-		icon = GFX_goal_unknown
-		cost = 5.00
-		prerequisite = {
-			focus = Rhee_erection_1st
-		}
-		x = 31
-		y = 11
+		x = 21
+		y = 17
 
 	}
 	focus = {
@@ -720,22 +714,16 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = Rhee_Provisional_government_end
+			focus = Rhee_anti_ethnic_actor
 		}
-		x = 13
-		y = 11
-
-	}
-	focus = {
-		id = Rhee_comunism_all_kill
-		text = Rhee_comunism_all_kill
-		icon = GFX_goal_unknown
-		cost = 10.00
 		prerequisite = {
-			focus = Rhee_loser_kill
+			focus = Rhee_communist_kill
 		}
-		x = 17
-		y = 10
+		prerequisite = {
+			focus = Korea_manse
+		}
+		x = 21
+		y = 16
 
 	}
 	focus = {
@@ -744,13 +732,10 @@ focus_tree = {
 		icon = GFX_goal_unknown
 		cost = 10.00
 		prerequisite = {
-			focus = Rhee_anti_ethnic_actor
+			focus = Rhee_rhee_sy_good
 		}
-		prerequisite = {
-			focus = Rhee_communist_kill
-		}
-		x = 18
-		y = 14
+		x = 21
+		y = 15
 
 	}
 	focus = {
@@ -764,8 +749,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = newfocus_64
 		}
-		x = 33
-		y = 12
+		x = 41
+		y = 11
 
 	}
 	focus = {
@@ -779,8 +764,8 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = newfocus_63
 		}
-		x = 29
-		y = 12
+		x = 37
+		y = 11
 
 	}
 	focus = {
@@ -792,8 +777,8 @@ focus_tree = {
 			focus = newfocus_63
 			focus = newfocus_64
 		}
-		x = 33
-		y = 13
+		x = 41
+		y = 12
 
 	}
 	focus = {
@@ -805,8 +790,8 @@ focus_tree = {
 			focus = newfocus_64
 			focus = newfocus_63
 		}
-		x = 29
-		y = 13
+		x = 37
+		y = 12
 
 	}
 	focus = {
@@ -817,8 +802,8 @@ focus_tree = {
 		prerequisite = {
 			focus = newfocus_66
 		}
-		x = 29
-		y = 14
+		x = 37
+		y = 13
 
 	}
 	focus = {
@@ -829,8 +814,8 @@ focus_tree = {
 		prerequisite = {
 			focus = newfocus_65
 		}
-		x = 33
-		y = 14
+		x = 41
+		y = 13
 
 	}
 	focus = {
@@ -844,38 +829,8 @@ focus_tree = {
 		prerequisite = {
 			focus = newfocus_68
 		}
-		x = 31
-		y = 15
-
-	}
-	focus = {
-		id = Rhee_a
-		text = Rhee_a
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_kor_wehe
-		}
-		mutually_exclusive = {
-			focus = Rhee_b
-		}
-		x = 16
-		y = 18
-
-	}
-	focus = {
-		id = Rhee_b
-		text = Rhee_b
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_kor_wehe
-		}
-		mutually_exclusive = {
-			focus = Rhee_a
-		}
-		x = 20
-		y = 18
+		x = 39
+		y = 14
 
 	}
 	focus = {
@@ -887,8 +842,8 @@ focus_tree = {
 			focus = Rhee_a
 			focus = Rhee_b
 		}
-		x = 18
-		y = 19
+		x = 25
+		y = 22
 
 	}
 	focus = {
@@ -899,8 +854,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_ja
 		}
-		x = 18
-		y = 20
+		x = 25
+		y = 23
 
 	}
 	focus = {
@@ -911,8 +866,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_manju_yogu
 		}
-		x = 18
-		y = 21
+		x = 25
+		y = 24
 
 	}
 	focus = {
@@ -923,8 +878,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_ja_war
 		}
-		x = 18
-		y = 23
+		x = 25
+		y = 26
 
 	}
 	focus = {
@@ -935,8 +890,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_sov_war
 		}
-		x = 16
-		y = 24
+		x = 23
+		y = 27
 
 	}
 	focus = {
@@ -947,8 +902,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_manju_saben
 		}
-		x = 18
-		y = 22
+		x = 25
+		y = 25
 
 	}
 	focus = {
@@ -962,8 +917,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_daehan_emp
 		}
-		x = 18
-		y = 25
+		x = 25
+		y = 28
 
 	}
 	focus = {
@@ -974,8 +929,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_sov_war
 		}
-		x = 20
-		y = 24
+		x = 27
+		y = 27
 
 	}
 	focus = {
@@ -986,20 +941,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_european_war
 		}
-		x = 18
-		y = 26
-
-	}
-	focus = {
-		id = Rhee_free_defe
-		text = Rhee_free_defe
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = Rhee_daehan_manse
-		}
-		x = 20
-		y = 12
+		x = 25
+		y = 29
 
 	}
 	focus = {
@@ -1010,8 +953,8 @@ focus_tree = {
 		prerequisite = {
 			focus = Rhee_daehan_manse
 		}
-		x = 18
-		y = 12
+		x = 21
+		y = 14
 
 	}
 }
