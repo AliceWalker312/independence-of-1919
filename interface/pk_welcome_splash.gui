@@ -23,7 +23,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "tab_1_text_header_2"
 			position = { x = 25 y = 384 }
-			font = "aldrich_36_outline"
+			font = "hoi_20b"
 			text = "pk_SPLASH_TITLE"
 			maxWidth = 700
 			format = center
@@ -32,7 +32,7 @@ guiTypes = {
 		instantTextboxType = {
 			name = "tab_1_cont3_text"
 			position = { x = 43 y=453 }
-			font = "aldrich_20_outline"
+			font = "hoi_20b"
 			text = "pk_SPLASH_CREDITS"
 			maxWidth = 670
 		}
@@ -42,7 +42,7 @@ guiTypes = {
 			position = { x = 226 y = 590 }
 			quadTextureSprite ="GFX_main_lobby_button"	
 			buttonText = "확인"
-			buttonFont = "aldrich_24_outline"
+			buttonFont = "hoi_20b"
 			clicksound = click_default
 			oversound = ui_menu_over
 			shortcut = "ESCAPE"

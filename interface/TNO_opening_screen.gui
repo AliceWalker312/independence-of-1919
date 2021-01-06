@@ -1,5 +1,15 @@
 guiTypes = {
-
+	containerWindowType = {
+		name = "TNO_OpeningScreen_OpenButton"
+		position = { x =270 y =-36 }
+		Orientation = UPPER_RIGHT
+		origo = UPPER_RIGHT
+		buttonType = {
+			name = "topbar_opening_button"
+			position = { x = -2 y = -50 }
+			quadTextureSprite = "GFX_ledger_open_button"
+		}
+	}
 	containerWindowType = {
 		name = "TNO_OpeningScreen_Main"
 		size = { width = 945 height = 466 }
@@ -20,7 +30,7 @@ guiTypes = {
 				name = "TNO_OpeningScreen_Buttons_CountryView"
 				position = { x = 10 y = -2 }
 				quadTextureSprite = "GFX_TNO_demo_tab_button"
-				buttonFont = "Bomb_18"
+				buttonFont = "hoi_20b"
 				text = "COUNTRY INFO"
 			}
 			iconType = {
@@ -33,7 +43,7 @@ guiTypes = {
 				name = "TNO_OpeningScreen_Buttons_RegionView"
 				position = { x = 244 y = -2 }
 				quadTextureSprite = "GFX_TNO_demo_tab_button"
-				buttonFont = "Bomb_18"
+				buttonFont = "hoi_20b"
 				text = "REGION INFO"
 			}
 			iconType = {
@@ -48,7 +58,7 @@ guiTypes = {
 				name = "TNO_OpeningScreen_Buttons_FeatureView"
 				position = { x = 477 y = -2 }
 				quadTextureSprite = "GFX_TNO_demo_tab_button"
-				buttonFont = "Bomb_18"
+				buttonFont = "hoi_20b"
 				text = "MOD FEATURES"
 			}
 			iconType = {
@@ -61,7 +71,7 @@ guiTypes = {
 				name = "TNO_OpeningScreen_Buttons_ModView"
 				position = { x = 711 y = -2 }
 				quadTextureSprite = "GFX_TNO_demo_tab_button"
-				buttonFont = "Bomb_18"
+				buttonFont = "hoi_20b"
 				text = "MOD INFO"
 			}
 			iconType = {
@@ -87,7 +97,7 @@ guiTypes = {
 		buttonType = {
 			name = "TNO_OpeningScreen_CloseButton"
 			quadTextureSprite = "GFX_button_123x34"
-			buttonFont = "Bomb_18"
+			buttonFont = "hoi_20b"
 			buttonText = "TNO_OPENING_SCREEN_BUTTON_TEXT"
 			pdx_tooltip = "TNO_OPENING_SCREEN_BUTTON_TT"
 			position = { x = 782 y = 420 }
@@ -97,7 +107,7 @@ guiTypes = {
 		instantTextBoxType = {
             name = "TNO_OpeningScreen_Text_Country"
             position = { x = 22 y = 49 }
-            font = "aldrich_24_outline"
+            font = "hoi_20b"
             text = "COUNTRY_INFO_TEXT"
             maxWidth = 700
             maxHeight = 380
@@ -108,7 +118,7 @@ guiTypes = {
         instantTextBoxType = {
             name = "TNO_OpeningScreen_Text_Region"
             position = { x = 22 y = 49 }
-            font = "aldrich_24_outline"
+            font = "hoi_20b"
             text = "REGIONAL_INFO_TEXT"
             maxWidth = 700
             maxHeight = 380
@@ -119,7 +129,7 @@ guiTypes = {
         instantTextBoxType = {
             name = "TNO_OpeningScreen_Text_Mod_Features"
             position = { x = 22 y = 49 }
-            font = "aldrich_24_outline"
+            font = "hoi_20b"
             text = "MOD_FEATURES_TEXT"
             maxWidth = 700
             maxHeight = 380
@@ -130,49 +140,20 @@ guiTypes = {
         instantTextBoxType = {
             name = "TNO_OpeningScreen_Text_Mod_Info"
             position = { x = 22 y = 49 }
-            font = "aldrich_24_outline"
+            font = "hoi_20b"
             text = "MOD_INFO_TEXT"
             maxWidth = 700
             maxHeight = 380
             # alwaystransparent = yes
             scrollbarType = standardtext_slider
         }
-		
-		# instantTextBoxType = {
-		# 	name = "TNO_OpeningScreen_Text_ModInfo_Buttons"
-		# 	position = { x = 25 y = 49 }
-		# 	font = "aldrich_24_outline_closing"
-		# 	text = "MOD_INFO_TEXT"
-		# 	maxWidth = 712
-		# 	maxHeight = 410
-		# 	alwaystransparent = yes
-		# 	scrollbarType = standardtext_slider
-		# }
-		
+
 		buttonType = {
 			name = "TNO_discord_button"
 			quadTextureSprite = "GFX_discord_button"
-			position = { x = 14 y = 70 }
-			web_link = "https://discord.gg/QEFE7RrgZd"
+			position = { x = 14 y = 200 }
+			web_link = "https://discord.gg/TPvNqAnuVU"
 		}
-		#buttonType = {
-		#	name = "TNO_reddit_button"
-		#	quadTextureSprite = "GFX_reddit_button"
-		#	position = { x = 202 y = 40 }
-		#	web_link = "https://www.reddit.com/r/TNOmod/"
-		#}
-		#buttonType = {
-		#	name = "TNO_tvtropes_button"
-		#	quadTextureSprite = "GFX_tvtropes_button"
-		#	position = { x = 578 y = 40 }
-		#	web_link = "https://tvtropes.org/pmwiki/pmwiki.php/VideoGame/TheNewOrderLastDaysOfEurope"
-		#}
-		#buttonType = {
-		#	name = "TNO_twitter_button"
-		#	quadTextureSprite = "GFX_twitter_button"
-		#	position = { x = 390 y = 40 }
-		#	web_link = "https://twitter.com/tnomod"
-		#}
 	}
 	
 	containerWindowType = {
@@ -196,7 +177,7 @@ guiTypes = {
 		buttonType = {
 			name = "TNO_ClosingScreen_CloseButton"
 			quadTextureSprite = "GFX_button_359x34" 
-			buttonFont = "aldrich_24_outline"
+			buttonFont = "hoi_20b"
 			buttonText = "Thank you for playing!"
 			position = { x = 227 y = 497 }
 			shortcut = "ESCAPE"
@@ -205,7 +186,7 @@ guiTypes = {
 		instantTextBoxType = {
 			name = "TNO_ClosingScreen_Text"
 			position = { x = 20 y = 21 }
-			font = "aldrich_24_outline_closing"
+			font = "hoi_20b"
 			text = CLOSING_SCREEN_TEXT
 			maxWidth = 748
 			maxHeight = 462
