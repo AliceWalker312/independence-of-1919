@@ -9,8 +9,9 @@ state= {
 	state_category = rural
 
 	history= {
-		owner = SOV
+		owner = RUS
 		add_core_of = SOV
+		add_core_of = RUS
 		buildings = {
 			infrastructure = 3
 			12446 = {
