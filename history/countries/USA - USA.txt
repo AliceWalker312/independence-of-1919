@@ -291,7 +291,7 @@ set_autonomy = {
 }
 set_autonomy = {
 	target = JAP
-	autonomous_state =  autonomy_puppet
+	autonomous_state =  autonomy_japan_mandate
 }
 
 1939.1.1 = {
