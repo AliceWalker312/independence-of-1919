@@ -44,6 +44,21 @@
  PRK:0 "한국"
  PRK_DEF:0 "한국"
  PRK_ADJ:0 "한국"
+ RUS_fascism:0 "러시아국"
+ RUS_fascism_DEF:0 "러시아국"
+ RUS_democratic:0 "러시아 연방"
+ RUS_democratic_DEF:0 "러시아 연방"
+ RUS_communism:0 "소비에트 공화국 연방"
+ RUS_communism_DEF:0 "소비에트 공화국 연방"
+ RUS_neutrality:0 "러시아 제국"
+ RUS_neutrality_DEF:0 "러시아 제국"
+ RUS_fascism_ADJ:0 "러시아"
+ RUS_democratic_ADJ:0 "러시아"
+ RUS_communism_ADJ:0 "러시아"
+ RUS_neutrality_ADJ:0 "러시아 제국"
+ RUS:0 "러시아"
+ RUS_DEF:0 "러시아"
+ RUS_ADJ:0 "러시아"
 
  
  

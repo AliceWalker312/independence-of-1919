@@ -210,3 +210,6 @@ TRA = "countries/Transylvania.txt"
 
 ROK = "countries/Republic of korea.txt"
 PRK = "countries/peoples republic of korea.txt"
+
+#러시아
+RUS = "countries/russia.txt"
