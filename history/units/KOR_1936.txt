@@ -87,4 +87,77 @@ units = {
 		division_template = "시위대"
 		start_experience_factor = 0.3
 	}
+	instant_effect = {
+	
+
+		add_equipment_production = {
+			equipment = {
+				type = infantry_equipment_1
+				creator = "KOR"
+			}
+			requested_factories = 7
+			progress = 0.1
+			efficiency = 50
+		}
+	
+		add_equipment_production = {
+			equipment = {
+				type = support_equipment_1
+				creator = "KOR" 
+			}
+			requested_factories = 2
+			progress = 0.3
+			efficiency = 50
+		}
+	
+		add_equipment_production = {
+			equipment = {
+				type = artillery_equipment_1
+				creator = "KOR" 
+			}
+			requested_factories = 1
+			progress = 0.3
+			efficiency = 50
+		}
+	
+		add_equipment_production = {
+			equipment = {
+				type = light_tank_equipment_1
+				creator = "KOR" 
+			}
+			requested_factories = 3
+			progress = 0.4
+			efficiency = 50
+		}
+	
+		add_equipment_production = {
+			equipment = {
+				type = motorized_equipment_1
+				creator = "KOR" 
+			}
+			requested_factories = 3
+			progress = 0.4
+			efficiency = 50
+		}
+	
+		add_equipment_production = {
+			equipment = {
+				type = fighter_equipment_1
+				creator = "KOR" 
+			}
+			requested_factories = 1
+			progress = 0.15
+			efficiency = 50
+		}
+	
+		add_equipment_production = {
+			equipment = {
+				type = strat_bomber_equipment_1
+				creator = "KOR" 
+			}
+			requested_factories = 1
+			progress = 0.2
+			efficiency = 50
+		}
+	}
 	
