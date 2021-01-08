@@ -136,5 +136,50 @@ KOR_joungchuwon_category = {
 		}
 	}
 }
-	
 
+KOR_form_kingdom_category = {
+
+	form_japanese_korean_empire = {
+
+		icon = generic_form_nation
+		
+		fire_only_once = yes
+		
+		allowed = {
+				original_tag = KOR
+
+		}
+
+		available = {
+			is_subject = no
+			NOT = {
+			has_government = communism
+			}
+			custom_trigger_tooltip = {
+				tooltip = form_country_japanese_korean_kingdom_required_states_tt
+				JAP = { is_subject_of = KOR }
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = KOR
+			}
+		}
+
+		complete_effect = {			
+			KOR = {
+				every_state = {
+					limit = { is_core_of = JAP }
+					add_core_of = KOR
+				}
+				set_cosmetic_tag = korea_japan_kingdom
+				KOR = { annex_country = { target = JAP transfer_troops = yes }}
+			}
+		}
+
+		ai_will_do = {
+			base = 100
+			}
+	}
+}
