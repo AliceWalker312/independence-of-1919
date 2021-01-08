@@ -10,14 +10,14 @@ GET_CLOSEBUTTON_TEXT = {
 		trigger = { tag = CHI }
 		localization_key = TNO_OPENING_SCREEN_BUTTON_TEXT_CHI
 	}
-	## Default
-	text = {
-		localization_key = TNO_OPENING_SCREEN_BUTTON_TEXT_GEN
-	}
 	##러시아
 	text = {
 		trigger = { tag = RUS }
 		localization_key = TNO_OPENING_SCREEN_BUTTON_TEXT_RUS
+	}
+	## Default
+	text = {
+		localization_key = TNO_OPENING_SCREEN_BUTTON_TEXT_GEN
 	}
 }
 
@@ -62,9 +62,10 @@ GET_COUNTRY_INFO = {
 	text = {
 		localization_key = COUNTRY_INFO_NO_CONTENT
 	}
+	##러시아
 	text = {
 		trigger = { tag = RUS }
-		localization_key = COUNTRY_INFO_KOREA
+		localization_key = COUNTRY_INFO_RUSSIA
 	}
 }
 
@@ -121,7 +122,7 @@ GET_POSTER = {
 	}
 	text = {
 		trigger = { tag = RUS }
-		localization_key = "GFX_TNO_OpeningScreen_Poster_Korea"
+		localization_key = "GFX_TNO_OpeningScreen_Poster_Russia"
 	}
 	## Default
 	text = {
