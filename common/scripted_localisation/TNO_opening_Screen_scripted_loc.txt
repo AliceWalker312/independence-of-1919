@@ -14,6 +14,11 @@ GET_CLOSEBUTTON_TEXT = {
 	text = {
 		localization_key = TNO_OPENING_SCREEN_BUTTON_TEXT_GEN
 	}
+	##러시아
+	text = {
+		trigger = { tag = RUS }
+		localization_key = TNO_OPENING_SCREEN_BUTTON_TEXT_RUS
+	}
 }
 
 GET_CURRENT_INTRO_TEXT = {
@@ -57,6 +62,10 @@ GET_COUNTRY_INFO = {
 	text = {
 		localization_key = COUNTRY_INFO_NO_CONTENT
 	}
+	text = {
+		trigger = { tag = RUS }
+		localization_key = COUNTRY_INFO_KOREA
+	}
 }
 
 GET_REGIONAL_INFO = {
@@ -69,6 +78,7 @@ GET_REGIONAL_INFO = {
 				original_tag = KOR
 				original_tag = CHI
 				original_tag = JAP
+				original_tag = RUS
 			}
 		}
 		localization_key = REGIONAL_INFO_ASIA
@@ -94,6 +104,12 @@ GET_REGIONALSYMBOL = {
 	text = {
 		localization_key = "GFX_TNO_OpeningScreen_Region_EUROPE"
 	}
+	text = {
+		trigger = {
+			tag = RUS
+		}
+		localization_key = "GFX_TNO_OpeningScreen_Region_EASTERN_ASIA"
+	}
 }
 
 GET_POSTER = {
@@ -101,6 +117,10 @@ GET_POSTER = {
 	#Iberia
 	text = {
 		trigger = { tag = KOR }
+		localization_key = "GFX_TNO_OpeningScreen_Poster_Korea"
+	}
+	text = {
+		trigger = { tag = RUS }
 		localization_key = "GFX_TNO_OpeningScreen_Poster_Korea"
 	}
 	## Default
