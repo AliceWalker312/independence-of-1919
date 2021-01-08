@@ -745,6 +745,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.2
+			custom_effect_tooltip = decision_kingdom_unlock
 		}
 		x = 18
 		y = 9

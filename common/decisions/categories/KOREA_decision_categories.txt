@@ -52,3 +52,14 @@ KOR_joungchuwon_category = {
 		has_country_flag = KOR_return_joungchuwon
 	}
 }
+KOR_form_kingdom_category = {
+	
+	icon = GFX_decision_category_generic
+
+	allowed = {
+		original_tag = KOR
+	}
+	visible = {
+		has_completed_focus = UKK_start_intervention
+	}
+}

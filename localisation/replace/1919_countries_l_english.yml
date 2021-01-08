@@ -44,6 +44,7 @@
  PRK:0 "한국"
  PRK_DEF:0 "한국"
  PRK_ADJ:0 "한국"
+<<<<<<< Updated upstream
  RUS_fascism:0 "러시아국"
  RUS_fascism_DEF:0 "러시아국"
  RUS_democratic:0 "러시아 연방"
@@ -59,6 +60,17 @@
  RUS:0 "러시아"
  RUS_DEF:0 "러시아"
  RUS_ADJ:0 "러시아"
+=======
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+>>>>>>> Stashed changes
 
  
  
@@ -82,6 +94,9 @@ KOR_united_kingdom_of_korea_ADJ:0 "한국"
 KOR_EMPIRE_neutrality:0 "대한제국"
 KOR_EMPIRE_neutrality_DEF:0 "대한제국"
 KOR_EMPIRE_neutrality_ADJ:0 "대한제국"
+korea_japan_kingdom_democratic:0 "대한 - 일본 연합왕국"
+korea_japan_kingdom_fascism:0 "대한 - 일본 연합제국"
+korea_japan_kingdom_neutrality:0 "대한 - 일본 연합왕국"
 
 
 

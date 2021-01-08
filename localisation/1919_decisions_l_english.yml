@@ -33,3 +33,10 @@ mtg_KOR_congress_large_opposition_tt:0 "§Y상당수의 정치인들§!이 §R�
 KOR_congress_low_support_trigger_tt:1 "최소 §Y[?KOR.quorum_low] 참의원§! (현재: [?KOR.senate_support]) 그리고 §Y174 민의원§! (현재: [?KOR.house_support])의 지지도 필요함\n"
 KOR_congress_medium_support_trigger_tt:1 "최소 §Y[?KOR.quorum_medium] 참의원§! (현재: [?KOR.senate_support]) 그리고 §Y218 민의원§! (현재: [?KOR.house_support])의 지지도 필요함\n"
 KOR_congress_high_support_trigger_tt:1 "최소 §Y[?KOR.quorum_high] 참의원§! (현재: [?KOR.senate_support]) 그리고 §Y261 민의원§! (현재: [?KOR.house_support])의 지지도 필요함\n"
+
+####대한 연합왕국 왕국 확장 디시전####
+KOR_form_kingdom_category:0 "대한 연합왕국 확장"
+KOR_form_kingdom_category_desc:0 "우리 대한은 국왕의 통치하에 번영해왔습니다. 이제 다른나라도 우리의 '번영'을 누릴수 있게 해야합니다."
+
+form_japanese_korean_empire:0 "대한 - 일본 연합왕국 건설"
+form_country_japanese_korean_kingdom_required_states_tt:0 "일본을 §Y괴뢰국§!으로 가짐"
